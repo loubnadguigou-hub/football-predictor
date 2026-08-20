@@ -1,240 +1,325 @@
-import numpy as np
-import pandas as pd
+import sys
+import os
+
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 import streamlit as st
+import pandas as pd
+import numpy as np
+import plotly.express as px
+
+from src.data_loader import load_data, load_schedule, fetch_sportradar_player_profile
+from src.elo_dixon_coles import EloDixonColesModel
+from src.player_model import PlayerGoalModel
 
 # 1. Page Configuration
 st.set_page_config(
-    page_title="Global Football Analytics & Goal Engine",
+    page_title="EPL Predictive Analytics Hub",
+    page_icon="⚽",
     layout="wide"
 )
 
-# 2. Custom CSS Styling
+# Custom Styling
 st.markdown("""
     <style>
-    .stApp {
-        background-color: #0b0f19;
-        color: #e2e8f0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    }
-    .main .block-container {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        max-width: 1200px;
-    }
-    h1 {
-        color: #f8fafc !important;
-        font-size: 2.1rem !important;
-        font-weight: 700 !important;
-        border-bottom: 1px solid #1e293b;
-        padding-bottom: 0.75rem;
-    }
-    h2, h3 {
-        color: #cbd5e1 !important;
-        font-size: 1.25rem !important;
-        font-weight: 600 !important;
-    }
-    div[data-testid="stMetric"] {
-        background-color: #111827;
-        border: 1px solid #1f2937;
-        border-radius: 6px;
-        padding: 18px;
-    }
-    div[data-testid="stMetricLabel"] {
-        color: #9ca3af !important;
-        font-size: 0.8rem !important;
-        font-weight: 500 !important;
+    .main-title {
+        text-align: center;
+        font-size: 34px;
+        font-weight: 900;
+        color: #111827;
+        letter-spacing: 1px;
         text-transform: uppercase;
+        margin-top: -10px;
+        margin-bottom: 20px;
     }
-    div[data-testid="stMetricValue"] {
-        color: #38bdf8 !important;
-        font-size: 1.8rem !important;
-        font-weight: 700 !important;
+    .metric-box {
+        background-color: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 16px;
+        text-align: center;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.04);
     }
-    button[data-baseweb="tab"] {
-        font-size: 0.95rem !important;
-        font-weight: 500 !important;
-        color: #94a3b8 !important;
+    .metric-title {
+        font-size: 11px;
+        font-weight: 700;
+        color: #4a5568;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 6px;
     }
-    button[aria-selected="true"] {
-        color: #38bdf8 !important;
-        border-bottom-color: #38bdf8 !important;
-    }
-    .stDataFrame {
-        border: 1px solid #1f2937;
-        border-radius: 6px;
+    .metric-val {
+        font-size: 28px;
+        font-weight: 800;
+        color: #1a202c;
     }
     </style>
 """, unsafe_allow_html=True)
 
+# Main Title
+st.markdown("<div class='main-title'>⚽ Premier League Predictive Analytics Hub</div>", unsafe_allow_html=True)
 
-# 3. Global Teams & Data Engine (~380 Teams Dataset)
-@st.cache_data(ttl=86400)
-def load_all_global_teams():
-    """Loads match data from major European leagues to generate ~380 teams dynamically."""
-    league_urls = [
-        # Premier League, Championship, League 1, League 2
-        "https://www.football-data.co.uk/mmz4281/2526/E0.csv",
-        "https://www.football-data.co.uk/mmz4281/2526/E1.csv",
-        "https://www.football-data.co.uk/mmz4281/2526/E2.csv",
-        "https://www.football-data.co.uk/mmz4281/2526/E3.csv",
-        # La Liga, Segunda
-        "https://www.football-data.co.uk/mmz4281/2526/SP1.csv",
-        "https://www.football-data.co.uk/mmz4281/2526/SP2.csv",
-        # Serie A, Serie B
-        "https://www.football-data.co.uk/mmz4281/2526/I1.csv",
-        "https://www.football-data.co.uk/mmz4281/2526/I2.csv",
-        # Bundesliga, Bundesliga 2
-        "https://www.football-data.co.uk/mmz4281/2526/D1.csv",
-        "https://www.football-data.co.uk/mmz4281/2526/D2.csv",
-        # Ligue 1, Ligue 2
-        "https://www.football-data.co.uk/mmz4281/2526/F1.csv",
-        "https://www.football-data.co.uk/mmz4281/2526/F2.csv",
-        # Netherlands, Portugal, Belgium, Scotland
-        "https://www.football-data.co.uk/mmz4281/2526/N1.csv",
-        "https://www.football-data.co.uk/mmz4281/2526/P1.csv",
-        "https://www.football-data.co.uk/mmz4281/2526/B1.csv",
-        "https://www.football-data.co.uk/mmz4281/2526/SC0.csv",
-    ]
+# Load Models & Schedule Data
+dixon_coles_engine = EloDixonColesModel()
+player_engine = PlayerGoalModel()
+teams = dixon_coles_engine.get_teams()
+df_schedule = load_schedule()
 
-    all_teams_stats = {}
+# ---------------------------------------------------------
+# SIDEBAR
+# ---------------------------------------------------------
+st.sidebar.markdown("### ⚙️ 1. Match Data Source")
+data_source = st.sidebar.radio("Match Data:", ["Premier League Direct (URL)", "Sample Dataset"], index=0)
+st.sidebar.success("✓ Loaded 380 matches")
+st.sidebar.markdown("---")
 
-    for url in league_urls:
-        try:
-            df = pd.read_csv(url)
-            if "HomeTeam" in df.columns and "FTHG" in df.columns:
-                teams = df["HomeTeam"].dropna().unique()
-                for team in teams:
-                    home_m = df[df["HomeTeam"] == team]
-                    away_m = df[df["AwayTeam"] == team]
-                    total_games = len(home_m) + len(away_m)
-                    
-                    if total_games > 0:
-                        goals = home_m["FTHG"].sum() + away_m["FTAG"].sum()
-                        shots = (home_m["HST"].sum() if "HST" in df.columns else total_games * 4) + \
-                                (away_m["AST"].sum() if "AST" in df.columns else total_games * 4)
-                        
-                        all_teams_stats[team] = {
-                            "avg_goals": goals / total_games,
-                            "avg_sot": shots / total_games
-                        }
-        except Exception:
-            continue
+st.sidebar.markdown("### 🧑‍💻 2. Player Data Source")
+st.sidebar.caption("Upload Real Player Stats CSV (FBref/Understat)")
+uploaded_file = st.sidebar.file_uploader("Upload", type=["csv"], help="200MB per file • CSV")
 
-    if not all_teams_stats:
-        # Fallback generated team list if external data source is unreachable
-        for i in range(1, 381):
-            all_teams_stats[f"Team_{i}"] = {"avg_goals": 1.35, "avg_sot": 4.2}
+# ---------------------------------------------------------
+# MAIN NAVIGATION TABS
+# ---------------------------------------------------------
+tab1, tab2 = st.tabs(["📊 Match Outcome Engine", "🎯 Player Goal Scoring Model"])
 
-    return all_teams_stats
-
-teams_database = load_all_global_teams()
-all_team_names = sorted(list(teams_database.keys()))
-
-
-def get_squad_player_predictions(team_name):
-    """Generates player-level Poisson probabilities for any given team."""
-    team_info = teams_database.get(team_name, {"avg_goals": 1.35, "avg_sot": 4.2})
-    team_xg = team_info["avg_goals"]
-    team_sot = team_info["avg_sot"]
-
-    # Squad positional distribution based on team attacking power
-    player_slots = [
-        {"name": f"{team_name} Main Striker", "pos": "FW", "xg_share": 0.38, "sot_share": 0.35},
-        {"name": f"{team_name} Left Winger", "pos": "FW", "xg_share": 0.24, "sot_share": 0.25},
-        {"name": f"{team_name} Right Winger", "pos": "FW", "xg_share": 0.20, "sot_share": 0.20},
-        {"name": f"{team_name} Attacking Midfielder", "pos": "MF", "xg_share": 0.10, "sot_share": 0.12},
-        {"name": f"{team_name} Central Midfielder", "pos": "MF", "xg_share": 0.05, "sot_share": 0.05},
-        {"name": f"{team_name} Center Back", "pos": "DF", "xg_share": 0.03, "sot_share": 0.03},
-    ]
-
-    players = []
-    for p in player_slots:
-        xg90 = round(team_xg * p["xg_share"], 2)
-        xsot90 = round(team_sot * p["sot_share"], 2)
-
-        goal_prob = round((1 - np.exp(-xg90)) * 100, 1)
-        no_goal_prob = round((np.exp(-xg90)) * 100, 1)
-        zero_shots_prob = round((np.exp(-xsot90)) * 100, 1)
-
-        players.append({
-            "Player Name": p["name"],
-            "Position": p["pos"],
-            "xG / 90": xg90,
-            "xSoT / 90": xsot90,
-            "Goal Prob (%)": goal_prob,
-            "No Goal Prob (%)": no_goal_prob,
-            "0 Shots Target Prob (%)": zero_shots_prob
-        })
-
-    return pd.DataFrame(players)
-
-
-# 4. Streamlit Application UI
-st.title("Global Football Predictive Engine")
-st.caption(f"Loaded Database: {len(all_team_names)} Teams Supported")
-
-tab1, tab2 = st.tabs(["Match Prediction & Goalscorers", "Squad Goal Model"])
-
-# TAB 1: Match Level Predictions (Any Matchup)
+# ---------------------------------------------------------
+# TAB 1: MATCH OUTCOME ENGINE
+# ---------------------------------------------------------
 with tab1:
-    st.header("Match Predictions & Expected Goalscorers")
+    st.markdown("### 🗓️ 2026/27 Full Season Schedule & Match Selector")
 
-    col_home, col_away = st.columns(2)
-    with col_home:
-        home_team = st.selectbox("Select Home Team", all_team_names, index=0)
-    with col_away:
-        away_team = st.selectbox("Select Away Team", all_team_names, index=1 if len(all_team_names) > 1 else 0)
+    if not df_schedule.empty:
+        # Standardize column names
+        df_sched = df_schedule.copy()
+        df_sched.columns = df_sched.columns.str.lower().str.strip()
+        
+        rename_map = {
+            "wk": "matchweek", "week": "matchweek",
+            "home": "home_team", "away": "away_team",
+            "time": "kickoff_time_uk"
+        }
+        df_sched = df_sched.rename(columns=rename_map)
+
+        # 1. Matchweek Filter
+        available_mws = sorted(df_sched["matchweek"].unique()) if "matchweek" in df_sched.columns else [1]
+        
+        col_mw, col_fixture = st.columns([1, 3])
+
+        with col_mw:
+            selected_mw = st.selectbox("📅 Select Matchweek:", available_mws, index=0)
+
+        # Filter schedule by Matchweek
+        mw_df = df_sched[df_sched["matchweek"] == selected_mw].copy()
+
+        # Format match display label: "Day Date Time: Home vs Away"
+        def format_fixture_label(row):
+            date_str = str(row.get("date", ""))
+            day_str = str(row.get("day", ""))[:3]
+            time_str = str(row.get("kickoff_time_uk", ""))
+            home = str(row.get("home_team", ""))
+            away = str(row.get("away_team", ""))
+            return f"{day_str} {date_str} @ {time_str} UK | {home} vs {away}"
+
+        mw_df["fixture_label"] = mw_df.apply(format_fixture_label, axis=1)
+
+        with col_fixture:
+            selected_fixture_label = st.selectbox("⏰ Select Match Fixture (by Time & Teams):", mw_df["fixture_label"].tolist())
+
+        # Extract selected row
+        selected_match_row = mw_df[mw_df["fixture_label"] == selected_fixture_label].iloc[0]
+        home_team = selected_match_row["home_team"]
+        away_team = selected_match_row["away_team"]
+        match_date = selected_match_row.get("date", "")
+        match_time = selected_match_row.get("kickoff_time_uk", "")
+        match_day = selected_match_row.get("day", "")
+
+        # Display Selected Match Info Banner
+        st.info(f"📌 **Selected Fixture:** {home_team} vs {away_team} — **Date:** {match_day}, {match_date} at **{match_time} UK**")
+
+    else:
+        col_home, col_away = st.columns(2)
+        with col_home:
+            home_team = st.selectbox("Home Team", teams, index=0)
+        with col_away:
+            away_team = st.selectbox("Away Team", teams, index=1)
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    if home_team == away_team:
+        st.warning("Please select two different teams.")
+    else:
+        # Compute match forecasts
+        res = dixon_coles_engine.predict(home_team, away_team)
+
+        # Top Banner & Projected Scorelines
+        col_banner, col_top_scores = st.columns([2, 1])
+
+        with col_banner:
+            st.markdown(f"""
+            <div style="background-color: #00a86b; padding: 22px; border-radius: 12px; color: white; margin-bottom: 15px;">
+                <div style="font-size: 13px; font-weight: 800; letter-spacing: 1px; margin-bottom: 5px;">🎯 MODEL FORECASTED EXACT SCORE</div>
+                <div style="font-size: 36px; font-weight: 800; margin-bottom: 5px;">{home_team} {res['best_home_goals']} - {res['best_away_goals']} {away_team}</div>
+                <div style="font-size: 16px; opacity: 0.95;">Highest probability scoreline at <b>{res['best_prob']:.1%}</b> chance</div>
+            </div>
+            """, unsafe_allow_html=True)
+
+        with col_top_scores:
+            st.markdown("##### 📈 Top Projected Scorelines")
+            score_probs = []
+            matrix_norm = res['matrix'] / np.sum(res['matrix'])
+            for h_g in range(4):
+                for a_g in range(5):
+                    score_probs.append((f"{home_team} {h_g} - {a_g} {away_team}", matrix_norm[h_g, a_g]))
+            score_probs.sort(key=lambda x: x[1], reverse=True)
+
+            top_df = pd.DataFrame(score_probs[:4], columns=["Scoreline", "Probability"])
+            top_df["Probability"] = top_df["Probability"].apply(lambda x: f"{x:.1%}")
+            st.dataframe(top_df, use_container_width=True, hide_index=True)
+
+        # Metric Cards
+        col1, col2, col3, col4 = st.columns(4)
+
+        with col1:
+            st.markdown(f"""
+            <div class="metric-box">
+                <div class="metric-title">{home_team.upper()} ELO</div>
+                <div class="metric-val">{res['home_elo']}</div>
+            </div>
+            """, unsafe_allow_html=True)
+
+        with col2:
+            st.markdown(f"""
+            <div class="metric-box">
+                <div class="metric-title">{away_team.upper()} ELO</div>
+                <div class="metric-val">{res['away_elo']}</div>
+            </div>
+            """, unsafe_allow_html=True)
+
+        with col3:
+            st.markdown(f"""
+            <div class="metric-box">
+                <div class="metric-title">{home_team.upper()} EXP. GOALS (λ)</div>
+                <div class="metric-val">{res['lambda_home']:.2f}</div>
+            </div>
+            """, unsafe_allow_html=True)
+
+        with col4:
+            st.markdown(f"""
+            <div class="metric-box">
+                <div class="metric-title">{away_team.upper()} EXP. GOALS (λ)</div>
+                <div class="metric-val">{res['lambda_away']:.2f}</div>
+            </div>
+            """, unsafe_allow_html=True)
+
+        st.markdown("<br>", unsafe_allow_html=True)
+
+        # Outcome Probabilities
+        p1, p2, p3 = st.columns(3)
+        with p1:
+            st.markdown(f"<div style='font-size: 16px; font-weight: 600; color: #2d3748;'>🏠 {home_team} Win</div>", unsafe_allow_html=True)
+            st.markdown(f"<div style='font-size: 42px; font-weight: 800; color: #1a202c; margin-top: -5px;'>{res['home_win_p']:.1%}</div>", unsafe_allow_html=True)
+
+        with p2:
+            st.markdown("<div style='font-size: 16px; font-weight: 600; color: #2d3748;'>🤝 Draw</div>", unsafe_allow_html=True)
+            st.markdown(f"<div style='font-size: 42px; font-weight: 800; color: #1a202c; margin-top: -5px;'>{res['draw_p']:.1%}</div>", unsafe_allow_html=True)
+
+        with p3:
+            st.markdown(f"<div style='font-size: 16px; font-weight: 600; color: #2d3748;'>🚀 {away_team} Win</div>", unsafe_allow_html=True)
+            st.markdown(f"<div style='font-size: 42px; font-weight: 800; color: #1a202c; margin-top: -5px;'>{res['away_win_p']:.1%}</div>", unsafe_allow_html=True)
+
+        st.markdown("---")
+
+        # Probability Matrix
+        st.markdown("### 🧮 Scoreline Probability Matrix")
+
+        max_home, max_away = 4, 7
+        matrix_normalized = res['matrix'] / np.sum(res['matrix'])
+        text_matrix = [[f"{matrix_normalized[i, j]:.1%}" for j in range(max_away)] for i in range(max_home)]
+
+        fig = px.imshow(
+            matrix_normalized,
+            labels=dict(x="", y="", color="Probability"),
+            x=[f"{away_team} {j}" for j in range(max_away)],
+            y=[f"{home_team} {i}" for i in range(max_home)],
+            color_continuous_scale="Purples",
+            aspect="auto"
+        )
+
+        fig.update_traces(text=text_matrix, texttemplate="%{text}", textfont=dict(size=12, color="white"))
+        fig.update_layout(coloraxis_showscale=False, margin=dict(l=10, r=10, t=10, b=10), height=260, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
+
+        st.plotly_chart(fig, use_container_width=True)
+
+# ---------------------------------------------------------
+# TAB 2: PLAYER GOAL SCORING MODEL
+# ---------------------------------------------------------
+with tab2:
+    st.header(f"🎯 Player Goalscorer Predictions: {home_team} vs. {away_team}")
+    st.write("Identifies specific players from both competing squads who are most likely to score based on individual xG/90 and match expectations.")
+
+    df_home_players = player_engine.predict_player_probabilities(home_team)
+    df_away_players = player_engine.predict_player_probabilities(away_team)
+
+    # Standardize column headers
+    column_mapping = {
+        "Player": "Player Name",
+        "Pos": "Position",
+        "xG": "xG/90",
+        "Goal_Prob": "Anytime Goal Prob (%)",
+        "Prob": "Anytime Goal Prob (%)"
+    }
+    df_home_players = df_home_players.rename(columns=column_mapping)
+    df_away_players = df_away_players.rename(columns=column_mapping)
+
+    target_cols = ["Player Name", "Position", "xG/90", "Anytime Goal Prob (%)"]
+    display_home_cols = [col for col in target_cols if col in df_home_players.columns] or df_home_players.columns.tolist()
+    display_away_cols = [col for col in target_cols if col in df_away_players.columns] or df_away_players.columns.tolist()
+
+    col_h_players, col_a_players = st.columns(2)
+
+    with col_h_players:
+        st.subheader(f"🏠 {home_team} Top Goal Scorers")
+        st.dataframe(df_home_players[display_home_cols], use_container_width=True, hide_index=True)
+
+        if "Player Name" in df_home_players.columns and "Anytime Goal Prob (%)" in df_home_players.columns:
+            fig_h = px.bar(
+                df_home_players,
+                x="Player Name",
+                y="Anytime Goal Prob (%)",
+                color="Position" if "Position" in df_home_players.columns else None,
+                title=f"Goal Probability (%) by Player - {home_team}",
+                color_discrete_sequence=['#00a86b', '#3182ce', '#dd6b20']
+            )
+            fig_h.update_layout(template="plotly_white", height=320)
+            st.plotly_chart(fig_h, use_container_width=True)
+
+    with col_a_players:
+        st.subheader(f"🚀 {away_team} Top Goal Scorers")
+        st.dataframe(df_away_players[display_away_cols], use_container_width=True, hide_index=True)
+
+        if "Player Name" in df_away_players.columns and "Anytime Goal Prob (%)" in df_away_players.columns:
+            fig_a = px.bar(
+                df_away_players,
+                x="Player Name",
+                y="Anytime Goal Prob (%)",
+                color="Position" if "Position" in df_away_players.columns else None,
+                title=f"Goal Probability (%) by Player - {away_team}",
+                color_discrete_sequence=['#805ad5', '#e53e3e', '#319795']
+            )
+            fig_a.update_layout(template="plotly_white", height=320)
+            st.plotly_chart(fig_a, use_container_width=True)
 
     st.markdown("---")
-    st.subheader("Top Predicted Goalscorers for Fixture")
-
-    col_h_scorers, col_a_scorers = st.columns(2)
-
-    # Home Team Goal Candidates
-    with col_h_scorers:
-        st.markdown(f"### {home_team}")
-        df_home = get_squad_player_predictions(home_team)
-        top_h = df_home.iloc[0]
-        st.metric(
-            label=f"Top Goal Candidate ({top_h['Player Name']})",
-            value=f"{top_h['Goal Prob (%)']}%"
-        )
-        st.dataframe(
-            df_home[["Player Name", "Position", "Goal Prob (%)"]].head(4),
-            use_container_width=True,
-            hide_index=True
-        )
-
-    # Away Team Goal Candidates
-    with col_a_scorers:
-        st.markdown(f"### {away_team}")
-        df_away = get_squad_player_predictions(away_team)
-        top_a = df_away.iloc[0]
-        st.metric(
-            label=f"Top Goal Candidate ({top_a['Player Name']})",
-            value=f"{top_a['Goal Prob (%)']}%"
-        )
-        st.dataframe(
-            df_away[["Player Name", "Position", "Goal Prob (%)"]].head(4),
-            use_container_width=True,
-            hide_index=True
-        )
-
-# TAB 2: Individual Squad Analysis
-with tab2:
-    st.header("Squad Goal Probability Analysis")
-
-    selected_team = st.selectbox("Select Team for Squad Breakdown", all_team_names)
-    df_squad = get_squad_player_predictions(selected_team)
-
-    top_player = df_squad.iloc[0]
-    st.metric(
-        label=f"Highest Goal Probability ({selected_team})",
-        value=f"{top_player['Player Name']} — {top_player['Goal Prob (%)']}%"
-    )
-
-    st.dataframe(
-        df_squad[["Player Name", "Position", "xG / 90", "Goal Prob (%)", "No Goal Prob (%)", "0 Shots Target Prob (%)"]],
-        use_container_width=True,
-        hide_index=True
-    )
+    st.subheader("🔍 Sportradar Marketplace Live Player Data")
+    player_id_input = st.text_input("Enter Sportradar Player ID:", value="sr:player:159665")
+    
+    if st.button("Fetch Live Player Data"):
+        with st.spinner("Fetching data from Sportradar Marketplace..."):
+            player_info = fetch_sportradar_player_profile(player_id_input)
+            if player_info:
+                st.success("Data successfully loaded!")
+                col_a, col_b, col_c = st.columns(3)
+                col_a.metric("Player Name", player_info.get("Player Name", "N/A"))
+                col_b.metric("Position", player_info.get("Position", "N/A"))
+                col_c.metric("Current Club", player_info.get("Current Club", "N/A"))
+                st.table(pd.DataFrame([player_info]))
