@@ -71,4 +71,4 @@ df_schedule = load_schedule()
 st.sidebar.markdown("### ⚙️ 1. Match Data Source")
 data_source = st.sidebar.radio("Match Data:", ["Premier League Direct (URL)", "Sample Dataset"], index=0)
 st.sidebar.success("✓ Loaded 380 matches")
-st.sidebar.m
+st.sidebar.markdown("---")
