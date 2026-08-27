@@ -92,7 +92,7 @@ with tab1:
         # Standardize column names
         df_sched = df_schedule.copy()
         df_sched.columns = df_sched.columns.str.lower().str.strip()
-        
+
         rename_map = {
             "wk": "matchweek", "week": "matchweek",
             "home": "home_team", "away": "away_team",
@@ -102,7 +102,7 @@ with tab1:
 
         # 1. Matchweek Filter
         available_mws = sorted(df_sched["matchweek"].unique()) if "matchweek" in df_sched.columns else [1]
-        
+
         col_mw, col_fixture = st.columns([1, 3])
 
         with col_mw:
@@ -234,6 +234,7 @@ with tab1:
 
         max_home, max_away = 4, 7
         matrix_normalized = res['matrix'] / np.sum(res['matrix'])
+        matrix_normalized = matrix_normalized[:max_home, :max_away]  # slice to match label counts
         text_matrix = [[f"{matrix_normalized[i, j]:.1%}" for j in range(max_away)] for i in range(max_home)]
 
         fig = px.imshow(
@@ -312,7 +313,7 @@ with tab2:
     st.markdown("---")
     st.subheader("🔍 Sportradar Marketplace Live Player Data")
     player_id_input = st.text_input("Enter Sportradar Player ID:", value="sr:player:159665")
-    
+
     if st.button("Fetch Live Player Data"):
         with st.spinner("Fetching data from Sportradar Marketplace..."):
             player_info = fetch_sportradar_player_profile(player_id_input)
