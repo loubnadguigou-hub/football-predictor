@@ -1,0 +1,381 @@
+﻿season,matchweek,date,day,kickoff_time_uk,home_team,away_team,time_status,source
+2026-27,1,2026-08-21,Friday,20:00,Arsenal,Coventry City,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,1,2026-08-22,Saturday,12:30,Hull City,Manchester United,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,1,2026-08-22,Saturday,15:00,Everton,Crystal Palace,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,1,2026-08-22,Saturday,15:00,Ipswich Town,Sunderland,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,1,2026-08-22,Saturday,15:00,Nottingham Forest,Leeds United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,1,2026-08-22,Saturday,17:30,Brentford,Tottenham Hotspur,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,1,2026-08-23,Sunday,14:00,Brighton & Hove Albion,Aston Villa,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,1,2026-08-23,Sunday,14:00,Manchester City,AFC Bournemouth,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,1,2026-08-23,Sunday,16:30,Newcastle United,Liverpool,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,1,2026-08-24,Monday,20:00,Fulham,Chelsea,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,2,2026-08-28,Friday,20:00,Crystal Palace,Manchester City,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,2,2026-08-29,Saturday,12:30,Liverpool,Nottingham Forest,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,2,2026-08-29,Saturday,15:00,AFC Bournemouth,Everton,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,2,2026-08-29,Saturday,15:00,Coventry City,Hull City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,2,2026-08-29,Saturday,17:30,Tottenham Hotspur,Newcastle United,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,2,2026-08-30,Sunday,14:00,Chelsea,Brighton & Hove Albion,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,2,2026-08-30,Sunday,14:00,Leeds United,Brentford,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,2,2026-08-30,Sunday,14:00,Sunderland,Fulham,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,2,2026-08-30,Sunday,16:30,Manchester United,Ipswich Town,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,2,2026-08-31,Monday,20:00,Aston Villa,Arsenal,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,3,2026-09-04,Friday,20:00,Ipswich Town,Liverpool,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,3,2026-09-05,Saturday,12:30,Newcastle United,AFC Bournemouth,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,3,2026-09-05,Saturday,15:00,Brentford,Sunderland,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,3,2026-09-05,Saturday,15:00,Brighton & Hove Albion,Leeds United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,3,2026-09-05,Saturday,15:00,Fulham,Crystal Palace,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,3,2026-09-05,Saturday,15:00,Manchester City,Coventry City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,3,2026-09-05,Saturday,15:00,Nottingham Forest,Tottenham Hotspur,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,3,2026-09-05,Saturday,17:30,Hull City,Aston Villa,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,3,2026-09-06,Sunday,14:00,Everton,Manchester United,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,3,2026-09-06,Sunday,16:30,Arsenal,Chelsea,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,4,2026-09-12,Saturday,15:00,AFC Bournemouth,Brentford,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,4,2026-09-12,Saturday,15:00,Aston Villa,Nottingham Forest,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,4,2026-09-12,Saturday,15:00,Chelsea,Hull City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,4,2026-09-12,Saturday,15:00,Crystal Palace,Ipswich Town,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,4,2026-09-12,Saturday,15:00,Liverpool,Fulham,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,4,2026-09-12,Saturday,17:30,Tottenham Hotspur,Everton,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,4,2026-09-12,Saturday,20:00,Sunderland,Arsenal,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,4,2026-09-13,Sunday,14:00,Coventry City,Brighton & Hove Albion,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,4,2026-09-13,Sunday,16:30,Manchester United,Manchester City,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,4,2026-09-14,Monday,20:00,Leeds United,Newcastle United,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,5,2026-09-18,Friday,20:00,Brentford,Chelsea,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,5,2026-09-19,Saturday,12:30,Tottenham Hotspur,Aston Villa,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,5,2026-09-19,Saturday,15:00,Brighton & Hove Albion,Arsenal,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,5,2026-09-19,Saturday,15:00,Everton,Ipswich Town,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,5,2026-09-19,Saturday,15:00,Leeds United,Crystal Palace,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,5,2026-09-19,Saturday,15:00,Manchester City,Sunderland,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,5,2026-09-19,Saturday,15:00,Newcastle United,Hull City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,5,2026-09-19,Saturday,17:30,Nottingham Forest,Coventry City,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,5,2026-09-20,Sunday,14:00,AFC Bournemouth,Liverpool,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,5,2026-09-20,Sunday,16:30,Fulham,Manchester United,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,6,2026-10-10,Saturday,15:00,Arsenal,Leeds United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,6,2026-10-10,Saturday,15:00,Aston Villa,Brentford,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,6,2026-10-10,Saturday,15:00,Chelsea,AFC Bournemouth,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,6,2026-10-10,Saturday,15:00,Coventry City,Newcastle United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,6,2026-10-10,Saturday,15:00,Crystal Palace,Nottingham Forest,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,6,2026-10-10,Saturday,15:00,Hull City,Everton,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,6,2026-10-10,Saturday,15:00,Ipswich Town,Fulham,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,6,2026-10-10,Saturday,15:00,Liverpool,Manchester City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,6,2026-10-10,Saturday,15:00,Manchester United,Tottenham Hotspur,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,6,2026-10-10,Saturday,15:00,Sunderland,Brighton & Hove Albion,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,7,2026-10-17,Saturday,15:00,AFC Bournemouth,Sunderland,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,7,2026-10-17,Saturday,15:00,Brentford,Liverpool,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,7,2026-10-17,Saturday,15:00,Brighton & Hove Albion,Crystal Palace,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,7,2026-10-17,Saturday,15:00,Everton,Chelsea,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,7,2026-10-17,Saturday,15:00,Fulham,Hull City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,7,2026-10-17,Saturday,15:00,Leeds United,Manchester United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,7,2026-10-17,Saturday,15:00,Manchester City,Ipswich Town,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,7,2026-10-17,Saturday,15:00,Newcastle United,Aston Villa,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,7,2026-10-17,Saturday,15:00,Nottingham Forest,Arsenal,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,7,2026-10-17,Saturday,15:00,Tottenham Hotspur,Coventry City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,8,2026-10-24,Saturday,15:00,Arsenal,Everton,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,8,2026-10-24,Saturday,15:00,Aston Villa,Manchester City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,8,2026-10-24,Saturday,15:00,Chelsea,Tottenham Hotspur,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,8,2026-10-24,Saturday,15:00,Coventry City,Fulham,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,8,2026-10-24,Saturday,15:00,Crystal Palace,Newcastle United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,8,2026-10-24,Saturday,15:00,Hull City,Brentford,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,8,2026-10-24,Saturday,15:00,Ipswich Town,Nottingham Forest,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,8,2026-10-24,Saturday,15:00,Liverpool,Brighton & Hove Albion,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,8,2026-10-24,Saturday,15:00,Manchester United,AFC Bournemouth,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,8,2026-10-24,Saturday,15:00,Sunderland,Leeds United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,9,2026-10-31,Saturday,15:00,AFC Bournemouth,Leeds United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,9,2026-10-31,Saturday,15:00,Aston Villa,Fulham,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,9,2026-10-31,Saturday,15:00,Brentford,Nottingham Forest,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,9,2026-10-31,Saturday,15:00,Chelsea,Manchester United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,9,2026-10-31,Saturday,15:00,Coventry City,Sunderland,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,9,2026-10-31,Saturday,15:00,Hull City,Ipswich Town,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,9,2026-10-31,Saturday,15:00,Liverpool,Arsenal,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,9,2026-10-31,Saturday,15:00,Manchester City,Brighton & Hove Albion,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,9,2026-10-31,Saturday,15:00,Newcastle United,Everton,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,9,2026-10-31,Saturday,15:00,Tottenham Hotspur,Crystal Palace,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,10,2026-11-07,Saturday,15:00,Arsenal,Hull City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,10,2026-11-07,Saturday,15:00,Brighton & Hove Albion,Brentford,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,10,2026-11-07,Saturday,15:00,Crystal Palace,Liverpool,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,10,2026-11-07,Saturday,15:00,Everton,Coventry City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,10,2026-11-07,Saturday,15:00,Fulham,Newcastle United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,10,2026-11-07,Saturday,15:00,Ipswich Town,AFC Bournemouth,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,10,2026-11-07,Saturday,15:00,Leeds United,Tottenham Hotspur,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,10,2026-11-07,Saturday,15:00,Manchester United,Aston Villa,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,10,2026-11-07,Saturday,15:00,Nottingham Forest,Manchester City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,10,2026-11-07,Saturday,15:00,Sunderland,Chelsea,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,11,2026-11-21,Saturday,15:00,AFC Bournemouth,Nottingham Forest,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,11,2026-11-21,Saturday,15:00,Aston Villa,Sunderland,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,11,2026-11-21,Saturday,15:00,Brentford,Everton,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,11,2026-11-21,Saturday,15:00,Chelsea,Leeds United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,11,2026-11-21,Saturday,15:00,Coventry City,Crystal Palace,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,11,2026-11-21,Saturday,15:00,Hull City,Brighton & Hove Albion,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,11,2026-11-21,Saturday,15:00,Liverpool,Manchester United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,11,2026-11-21,Saturday,15:00,Manchester City,Fulham,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,11,2026-11-21,Saturday,15:00,Newcastle United,Arsenal,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,11,2026-11-21,Saturday,15:00,Tottenham Hotspur,Ipswich Town,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,12,2026-11-28,Saturday,15:00,Arsenal,Manchester City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,12,2026-11-28,Saturday,15:00,Brighton & Hove Albion,Newcastle United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,12,2026-11-28,Saturday,15:00,Crystal Palace,Hull City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,12,2026-11-28,Saturday,15:00,Everton,Liverpool,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,12,2026-11-28,Saturday,15:00,Fulham,AFC Bournemouth,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,12,2026-11-28,Saturday,15:00,Ipswich Town,Aston Villa,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,12,2026-11-28,Saturday,15:00,Leeds United,Coventry City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,12,2026-11-28,Saturday,15:00,Manchester United,Brentford,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,12,2026-11-28,Saturday,15:00,Nottingham Forest,Chelsea,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,12,2026-11-28,Saturday,15:00,Sunderland,Tottenham Hotspur,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,13,2026-12-02,Wednesday,20:00,AFC Bournemouth,Brighton & Hove Albion,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,13,2026-12-02,Wednesday,20:00,Aston Villa,Everton,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,13,2026-12-02,Wednesday,20:00,Brentford,Arsenal,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,13,2026-12-02,Wednesday,20:00,Chelsea,Crystal Palace,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,13,2026-12-02,Wednesday,20:00,Coventry City,Ipswich Town,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,13,2026-12-02,Wednesday,20:00,Hull City,Nottingham Forest,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,13,2026-12-02,Wednesday,20:00,Liverpool,Sunderland,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,13,2026-12-02,Wednesday,20:00,Manchester City,Leeds United,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,13,2026-12-02,Wednesday,20:00,Newcastle United,Manchester United,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,13,2026-12-02,Wednesday,20:00,Tottenham Hotspur,Fulham,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,14,2026-12-05,Saturday,15:00,AFC Bournemouth,Hull City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,14,2026-12-05,Saturday,15:00,Aston Villa,Crystal Palace,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,14,2026-12-05,Saturday,15:00,Brentford,Manchester City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,14,2026-12-05,Saturday,15:00,Chelsea,Liverpool,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,14,2026-12-05,Saturday,15:00,Everton,Fulham,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,14,2026-12-05,Saturday,15:00,Leeds United,Ipswich Town,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,14,2026-12-05,Saturday,15:00,Manchester United,Coventry City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,14,2026-12-05,Saturday,15:00,Newcastle United,Sunderland,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,14,2026-12-05,Saturday,15:00,Nottingham Forest,Brighton & Hove Albion,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,14,2026-12-05,Saturday,15:00,Tottenham Hotspur,Arsenal,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,15,2026-12-12,Saturday,15:00,Arsenal,AFC Bournemouth,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,15,2026-12-12,Saturday,15:00,Brighton & Hove Albion,Everton,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,15,2026-12-12,Saturday,15:00,Coventry City,Aston Villa,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,15,2026-12-12,Saturday,15:00,Crystal Palace,Manchester United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,15,2026-12-12,Saturday,15:00,Fulham,Brentford,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,15,2026-12-12,Saturday,15:00,Hull City,Tottenham Hotspur,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,15,2026-12-12,Saturday,15:00,Ipswich Town,Newcastle United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,15,2026-12-12,Saturday,15:00,Liverpool,Leeds United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,15,2026-12-12,Saturday,15:00,Manchester City,Chelsea,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,15,2026-12-12,Saturday,15:00,Sunderland,Nottingham Forest,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,16,2026-12-19,Saturday,15:00,AFC Bournemouth,Coventry City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,16,2026-12-19,Saturday,15:00,Arsenal,Manchester United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,16,2026-12-19,Saturday,15:00,Brentford,Newcastle United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,16,2026-12-19,Saturday,15:00,Brighton & Hove Albion,Ipswich Town,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,16,2026-12-19,Saturday,15:00,Chelsea,Aston Villa,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,16,2026-12-19,Saturday,15:00,Leeds United,Fulham,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,16,2026-12-19,Saturday,15:00,Liverpool,Tottenham Hotspur,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,16,2026-12-19,Saturday,15:00,Manchester City,Hull City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,16,2026-12-19,Saturday,15:00,Nottingham Forest,Everton,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,16,2026-12-19,Saturday,15:00,Sunderland,Crystal Palace,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,17,2026-12-26,Saturday,15:00,Aston Villa,Leeds United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,17,2026-12-26,Saturday,15:00,Coventry City,Chelsea,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,17,2026-12-26,Saturday,15:00,Crystal Palace,Arsenal,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,17,2026-12-26,Saturday,15:00,Everton,Sunderland,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,17,2026-12-26,Saturday,15:00,Fulham,Brighton & Hove Albion,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,17,2026-12-26,Saturday,15:00,Hull City,Liverpool,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,17,2026-12-26,Saturday,15:00,Ipswich Town,Brentford,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,17,2026-12-26,Saturday,15:00,Manchester United,Nottingham Forest,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,17,2026-12-26,Saturday,15:00,Newcastle United,Manchester City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,17,2026-12-26,Saturday,15:00,Tottenham Hotspur,AFC Bournemouth,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,18,2026-12-30,Wednesday,20:00,Aston Villa,Liverpool,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,18,2026-12-30,Wednesday,20:00,Coventry City,Brentford,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,18,2026-12-30,Wednesday,20:00,Crystal Palace,AFC Bournemouth,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,18,2026-12-30,Wednesday,20:00,Everton,Manchester City,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,18,2026-12-30,Wednesday,20:00,Fulham,Arsenal,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,18,2026-12-30,Wednesday,20:00,Hull City,Leeds United,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,18,2026-12-30,Wednesday,20:00,Ipswich Town,Chelsea,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,18,2026-12-30,Wednesday,20:00,Manchester United,Sunderland,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,18,2026-12-30,Wednesday,20:00,Newcastle United,Nottingham Forest,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,18,2026-12-30,Wednesday,20:00,Tottenham Hotspur,Brighton & Hove Albion,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,19,2027-01-02,Saturday,15:00,AFC Bournemouth,Aston Villa,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,19,2027-01-02,Saturday,15:00,Arsenal,Ipswich Town,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,19,2027-01-02,Saturday,15:00,Brentford,Crystal Palace,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,19,2027-01-02,Saturday,15:00,Brighton & Hove Albion,Manchester United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,19,2027-01-02,Saturday,15:00,Chelsea,Newcastle United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,19,2027-01-02,Saturday,15:00,Leeds United,Everton,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,19,2027-01-02,Saturday,15:00,Liverpool,Coventry City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,19,2027-01-02,Saturday,15:00,Manchester City,Tottenham Hotspur,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,19,2027-01-02,Saturday,15:00,Nottingham Forest,Fulham,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,19,2027-01-02,Saturday,15:00,Sunderland,Hull City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,20,2027-01-06,Wednesday,20:00,Arsenal,Brentford,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,20,2027-01-06,Wednesday,20:00,Brighton & Hove Albion,AFC Bournemouth,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,20,2027-01-06,Wednesday,20:00,Crystal Palace,Chelsea,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,20,2027-01-06,Wednesday,20:00,Everton,Aston Villa,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,20,2027-01-06,Wednesday,20:00,Fulham,Tottenham Hotspur,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,20,2027-01-06,Wednesday,20:00,Ipswich Town,Coventry City,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,20,2027-01-06,Wednesday,20:00,Leeds United,Manchester City,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,20,2027-01-06,Wednesday,20:00,Manchester United,Newcastle United,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,20,2027-01-06,Wednesday,20:00,Nottingham Forest,Hull City,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,20,2027-01-06,Wednesday,20:00,Sunderland,Liverpool,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,21,2027-01-16,Saturday,15:00,AFC Bournemouth,Ipswich Town,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,21,2027-01-16,Saturday,15:00,Aston Villa,Manchester United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,21,2027-01-16,Saturday,15:00,Brentford,Brighton & Hove Albion,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,21,2027-01-16,Saturday,15:00,Chelsea,Sunderland,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,21,2027-01-16,Saturday,15:00,Coventry City,Everton,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,21,2027-01-16,Saturday,15:00,Hull City,Arsenal,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,21,2027-01-16,Saturday,15:00,Liverpool,Crystal Palace,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,21,2027-01-16,Saturday,15:00,Manchester City,Nottingham Forest,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,21,2027-01-16,Saturday,15:00,Newcastle United,Fulham,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,21,2027-01-16,Saturday,15:00,Tottenham Hotspur,Leeds United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,22,2027-01-23,Saturday,15:00,Arsenal,Newcastle United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,22,2027-01-23,Saturday,15:00,Brighton & Hove Albion,Manchester City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,22,2027-01-23,Saturday,15:00,Crystal Palace,Tottenham Hotspur,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,22,2027-01-23,Saturday,15:00,Everton,Brentford,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,22,2027-01-23,Saturday,15:00,Fulham,Aston Villa,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,22,2027-01-23,Saturday,15:00,Ipswich Town,Hull City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,22,2027-01-23,Saturday,15:00,Leeds United,Chelsea,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,22,2027-01-23,Saturday,15:00,Manchester United,Liverpool,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,22,2027-01-23,Saturday,15:00,Nottingham Forest,AFC Bournemouth,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,22,2027-01-23,Saturday,15:00,Sunderland,Coventry City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,23,2027-01-30,Saturday,15:00,AFC Bournemouth,Fulham,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,23,2027-01-30,Saturday,15:00,Aston Villa,Ipswich Town,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,23,2027-01-30,Saturday,15:00,Brentford,Manchester United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,23,2027-01-30,Saturday,15:00,Chelsea,Nottingham Forest,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,23,2027-01-30,Saturday,15:00,Coventry City,Leeds United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,23,2027-01-30,Saturday,15:00,Hull City,Crystal Palace,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,23,2027-01-30,Saturday,15:00,Liverpool,Everton,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,23,2027-01-30,Saturday,15:00,Manchester City,Arsenal,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,23,2027-01-30,Saturday,15:00,Newcastle United,Brighton & Hove Albion,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,23,2027-01-30,Saturday,15:00,Tottenham Hotspur,Sunderland,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,24,2027-02-06,Saturday,15:00,Arsenal,Liverpool,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,24,2027-02-06,Saturday,15:00,Brighton & Hove Albion,Hull City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,24,2027-02-06,Saturday,15:00,Crystal Palace,Coventry City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,24,2027-02-06,Saturday,15:00,Everton,Newcastle United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,24,2027-02-06,Saturday,15:00,Fulham,Manchester City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,24,2027-02-06,Saturday,15:00,Ipswich Town,Tottenham Hotspur,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,24,2027-02-06,Saturday,15:00,Leeds United,AFC Bournemouth,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,24,2027-02-06,Saturday,15:00,Manchester United,Chelsea,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,24,2027-02-06,Saturday,15:00,Nottingham Forest,Brentford,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,24,2027-02-06,Saturday,15:00,Sunderland,Aston Villa,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,25,2027-02-10,Wednesday,20:00,Aston Villa,AFC Bournemouth,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,25,2027-02-10,Wednesday,20:00,Coventry City,Liverpool,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,25,2027-02-10,Wednesday,20:00,Crystal Palace,Brentford,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,25,2027-02-10,Wednesday,20:00,Everton,Leeds United,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,25,2027-02-10,Wednesday,20:00,Fulham,Nottingham Forest,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,25,2027-02-10,Wednesday,20:00,Hull City,Sunderland,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,25,2027-02-10,Wednesday,20:00,Ipswich Town,Arsenal,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,25,2027-02-10,Wednesday,20:00,Manchester United,Brighton & Hove Albion,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,25,2027-02-10,Wednesday,20:00,Newcastle United,Chelsea,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,25,2027-02-10,Wednesday,20:00,Tottenham Hotspur,Manchester City,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,26,2027-02-20,Saturday,15:00,AFC Bournemouth,Crystal Palace,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,26,2027-02-20,Saturday,15:00,Arsenal,Fulham,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,26,2027-02-20,Saturday,15:00,Brentford,Coventry City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,26,2027-02-20,Saturday,15:00,Brighton & Hove Albion,Tottenham Hotspur,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,26,2027-02-20,Saturday,15:00,Chelsea,Ipswich Town,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,26,2027-02-20,Saturday,15:00,Leeds United,Aston Villa,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,26,2027-02-20,Saturday,15:00,Liverpool,Hull City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,26,2027-02-20,Saturday,15:00,Manchester City,Newcastle United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,26,2027-02-20,Saturday,15:00,Nottingham Forest,Manchester United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,26,2027-02-20,Saturday,15:00,Sunderland,Everton,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,27,2027-02-27,Saturday,15:00,Aston Villa,Chelsea,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,27,2027-02-27,Saturday,15:00,Coventry City,AFC Bournemouth,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,27,2027-02-27,Saturday,15:00,Crystal Palace,Sunderland,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,27,2027-02-27,Saturday,15:00,Everton,Nottingham Forest,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,27,2027-02-27,Saturday,15:00,Fulham,Leeds United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,27,2027-02-27,Saturday,15:00,Hull City,Manchester City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,27,2027-02-27,Saturday,15:00,Ipswich Town,Brighton & Hove Albion,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,27,2027-02-27,Saturday,15:00,Manchester United,Arsenal,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,27,2027-02-27,Saturday,15:00,Newcastle United,Brentford,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,27,2027-02-27,Saturday,15:00,Tottenham Hotspur,Liverpool,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,28,2027-03-03,Wednesday,20:00,AFC Bournemouth,Tottenham Hotspur,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,28,2027-03-03,Wednesday,20:00,Arsenal,Crystal Palace,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,28,2027-03-03,Wednesday,20:00,Brentford,Ipswich Town,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,28,2027-03-03,Wednesday,20:00,Brighton & Hove Albion,Fulham,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,28,2027-03-03,Wednesday,20:00,Chelsea,Coventry City,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,28,2027-03-03,Wednesday,20:00,Leeds United,Hull City,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,28,2027-03-03,Wednesday,20:00,Liverpool,Aston Villa,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,28,2027-03-03,Wednesday,20:00,Manchester City,Everton,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,28,2027-03-03,Wednesday,20:00,Nottingham Forest,Newcastle United,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,28,2027-03-03,Wednesday,20:00,Sunderland,Manchester United,confirmed/revised,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,29,2027-03-13,Saturday,15:00,AFC Bournemouth,Newcastle United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,29,2027-03-13,Saturday,15:00,Aston Villa,Hull City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,29,2027-03-13,Saturday,15:00,Chelsea,Arsenal,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,29,2027-03-13,Saturday,15:00,Coventry City,Manchester City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,29,2027-03-13,Saturday,15:00,Crystal Palace,Fulham,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,29,2027-03-13,Saturday,15:00,Leeds United,Brighton & Hove Albion,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,29,2027-03-13,Saturday,15:00,Liverpool,Ipswich Town,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,29,2027-03-13,Saturday,15:00,Manchester United,Everton,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,29,2027-03-13,Saturday,15:00,Sunderland,Brentford,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,29,2027-03-13,Saturday,15:00,Tottenham Hotspur,Nottingham Forest,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,30,2027-03-20,Saturday,15:00,Arsenal,Sunderland,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,30,2027-03-20,Saturday,15:00,Brentford,AFC Bournemouth,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,30,2027-03-20,Saturday,15:00,Brighton & Hove Albion,Coventry City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,30,2027-03-20,Saturday,15:00,Everton,Tottenham Hotspur,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,30,2027-03-20,Saturday,15:00,Fulham,Liverpool,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,30,2027-03-20,Saturday,15:00,Hull City,Chelsea,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,30,2027-03-20,Saturday,15:00,Ipswich Town,Crystal Palace,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,30,2027-03-20,Saturday,15:00,Manchester City,Manchester United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,30,2027-03-20,Saturday,15:00,Newcastle United,Leeds United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,30,2027-03-20,Saturday,15:00,Nottingham Forest,Aston Villa,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,31,2027-04-10,Saturday,15:00,AFC Bournemouth,Manchester City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,31,2027-04-10,Saturday,15:00,Aston Villa,Brighton & Hove Albion,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,31,2027-04-10,Saturday,15:00,Chelsea,Fulham,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,31,2027-04-10,Saturday,15:00,Coventry City,Arsenal,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,31,2027-04-10,Saturday,15:00,Crystal Palace,Everton,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,31,2027-04-10,Saturday,15:00,Leeds United,Nottingham Forest,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,31,2027-04-10,Saturday,15:00,Liverpool,Newcastle United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,31,2027-04-10,Saturday,15:00,Manchester United,Hull City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,31,2027-04-10,Saturday,15:00,Sunderland,Ipswich Town,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,31,2027-04-10,Saturday,15:00,Tottenham Hotspur,Brentford,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,32,2027-04-17,Saturday,15:00,Arsenal,Aston Villa,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,32,2027-04-17,Saturday,15:00,Brentford,Leeds United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,32,2027-04-17,Saturday,15:00,Brighton & Hove Albion,Chelsea,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,32,2027-04-17,Saturday,15:00,Everton,AFC Bournemouth,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,32,2027-04-17,Saturday,15:00,Fulham,Sunderland,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,32,2027-04-17,Saturday,15:00,Hull City,Coventry City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,32,2027-04-17,Saturday,15:00,Ipswich Town,Manchester United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,32,2027-04-17,Saturday,15:00,Manchester City,Crystal Palace,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,32,2027-04-17,Saturday,15:00,Newcastle United,Tottenham Hotspur,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,32,2027-04-17,Saturday,15:00,Nottingham Forest,Liverpool,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,33,2027-04-24,Saturday,15:00,AFC Bournemouth,Arsenal,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,33,2027-04-24,Saturday,15:00,Aston Villa,Coventry City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,33,2027-04-24,Saturday,15:00,Brentford,Fulham,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,33,2027-04-24,Saturday,15:00,Chelsea,Manchester City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,33,2027-04-24,Saturday,15:00,Everton,Brighton & Hove Albion,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,33,2027-04-24,Saturday,15:00,Leeds United,Liverpool,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,33,2027-04-24,Saturday,15:00,Manchester United,Crystal Palace,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,33,2027-04-24,Saturday,15:00,Newcastle United,Ipswich Town,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,33,2027-04-24,Saturday,15:00,Nottingham Forest,Sunderland,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,33,2027-04-24,Saturday,15:00,Tottenham Hotspur,Hull City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,34,2027-05-01,Saturday,15:00,Arsenal,Tottenham Hotspur,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,34,2027-05-01,Saturday,15:00,Brighton & Hove Albion,Nottingham Forest,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,34,2027-05-01,Saturday,15:00,Coventry City,Manchester United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,34,2027-05-01,Saturday,15:00,Crystal Palace,Aston Villa,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,34,2027-05-01,Saturday,15:00,Fulham,Everton,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,34,2027-05-01,Saturday,15:00,Hull City,AFC Bournemouth,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,34,2027-05-01,Saturday,15:00,Ipswich Town,Leeds United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,34,2027-05-01,Saturday,15:00,Liverpool,Chelsea,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,34,2027-05-01,Saturday,15:00,Manchester City,Brentford,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,34,2027-05-01,Saturday,15:00,Sunderland,Newcastle United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,35,2027-05-08,Saturday,15:00,AFC Bournemouth,Manchester United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,35,2027-05-08,Saturday,15:00,Brentford,Aston Villa,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,35,2027-05-08,Saturday,15:00,Brighton & Hove Albion,Sunderland,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,35,2027-05-08,Saturday,15:00,Everton,Hull City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,35,2027-05-08,Saturday,15:00,Fulham,Ipswich Town,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,35,2027-05-08,Saturday,15:00,Leeds United,Arsenal,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,35,2027-05-08,Saturday,15:00,Manchester City,Liverpool,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,35,2027-05-08,Saturday,15:00,Newcastle United,Coventry City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,35,2027-05-08,Saturday,15:00,Nottingham Forest,Crystal Palace,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,35,2027-05-08,Saturday,15:00,Tottenham Hotspur,Chelsea,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,36,2027-05-15,Saturday,15:00,Arsenal,Nottingham Forest,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,36,2027-05-15,Saturday,15:00,Aston Villa,Newcastle United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,36,2027-05-15,Saturday,15:00,Chelsea,Everton,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,36,2027-05-15,Saturday,15:00,Coventry City,Tottenham Hotspur,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,36,2027-05-15,Saturday,15:00,Crystal Palace,Brighton & Hove Albion,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,36,2027-05-15,Saturday,15:00,Hull City,Fulham,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,36,2027-05-15,Saturday,15:00,Ipswich Town,Manchester City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,36,2027-05-15,Saturday,15:00,Liverpool,Brentford,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,36,2027-05-15,Saturday,15:00,Manchester United,Leeds United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,36,2027-05-15,Saturday,15:00,Sunderland,AFC Bournemouth,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,37,2027-05-23,Sunday,15:00,AFC Bournemouth,Chelsea,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,37,2027-05-23,Sunday,15:00,Brentford,Hull City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,37,2027-05-23,Sunday,15:00,Brighton & Hove Albion,Liverpool,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,37,2027-05-23,Sunday,15:00,Everton,Arsenal,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,37,2027-05-23,Sunday,15:00,Fulham,Coventry City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,37,2027-05-23,Sunday,15:00,Leeds United,Sunderland,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,37,2027-05-23,Sunday,15:00,Manchester City,Aston Villa,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,37,2027-05-23,Sunday,15:00,Newcastle United,Crystal Palace,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,37,2027-05-23,Sunday,15:00,Nottingham Forest,Ipswich Town,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,37,2027-05-23,Sunday,15:00,Tottenham Hotspur,Manchester United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,38,2027-05-30,Sunday,15:00,Arsenal,Brighton & Hove Albion,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,38,2027-05-30,Sunday,15:00,Aston Villa,Tottenham Hotspur,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,38,2027-05-30,Sunday,15:00,Chelsea,Brentford,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,38,2027-05-30,Sunday,15:00,Coventry City,Nottingham Forest,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,38,2027-05-30,Sunday,15:00,Crystal Palace,Leeds United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,38,2027-05-30,Sunday,15:00,Hull City,Newcastle United,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,38,2027-05-30,Sunday,15:00,Ipswich Town,Everton,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,38,2027-05-30,Sunday,15:00,Liverpool,AFC Bournemouth,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,38,2027-05-30,Sunday,15:00,Manchester United,Fulham,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
+2026-27,38,2027-05-30,Sunday,15:00,Sunderland,Manchester City,provisional_default,https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season
