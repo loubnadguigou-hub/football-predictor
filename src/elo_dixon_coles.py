@@ -8,7 +8,7 @@ class EloDixonColesModel:
         self.k_factor = k_factor
         self.default_elo = default_elo
         self.elos = {}
-        
+
         # Default paper parameters
         self.params = {
             'base': 1.11,   # Expected goals for an average neutral match
@@ -19,6 +19,22 @@ class EloDixonColesModel:
 
     def get_elo(self, team: str) -> float:
         return self.elos.get(team, self.default_elo)
+
+    def get_teams(self) -> list:
+        """
+        Returns the list of teams the model knows about.
+        Falls back to a default EPL team list if no match data
+        has been fit yet (self.elos will be empty in that case).
+        """
+        if self.elos:
+            return sorted(self.elos.keys())
+
+        return sorted([
+            "Arsenal", "Aston Villa", "Bournemouth", "Brentford", "Brighton",
+            "Chelsea", "Crystal Palace", "Everton", "Fulham", "Ipswich",
+            "Leicester", "Liverpool", "Man City", "Man United", "Newcastle",
+            "Nottingham Forest", "Southampton", "Tottenham", "West Ham", "Wolves"
+        ])
 
     def _expected_score(self, elo_a: float, elo_b: float, is_home: bool = True) -> float:
         h_boost = self.params['hfa'] if is_home else 0.0
@@ -82,16 +98,16 @@ class EloDixonColesModel:
                 r_a = self.get_elo(row['home_team'])
                 r_b = self.get_elo(row['away_team'])
                 is_home = row.get('is_home', True)
-                
+
                 delta = (r_a - r_b) + (hfa if is_home else 0.0)
                 l_a = base * np.exp(beta * (delta / 400.0))
                 l_b = base * np.exp(-beta * (delta / 400.0))
-                
+
                 x, y = int(row['home_goals']), int(row['away_goals'])
                 p_x = poisson.pmf(x, l_a)
                 p_y = poisson.pmf(y, l_b)
                 tau = self.tau_correction(x, y, l_a, l_b, rho)
-                
+
                 prob = max(1e-12, p_x * p_y * tau)
                 log_lh += np.log(prob)
 
@@ -110,7 +126,7 @@ class EloDixonColesModel:
         """
         elo_a = self.get_elo(team_a)
         elo_b = self.get_elo(team_b)
-        
+
         delta = (elo_a - elo_b) + (self.params['hfa'] if is_home else 0.0)
         lambda_a = self.params['base'] * np.exp(self.params['beta'] * (delta / 400.0))
         lambda_b = self.params['base'] * np.exp(-self.params['beta'] * (delta / 400.0))
@@ -138,4 +154,30 @@ class EloDixonColesModel:
             "lambda_a": lambda_a, "lambda_b": lambda_b,
             "win_a": win_a, "draw": draw, "win_b": win_b,
             "score_matrix": adjusted_matrix
+        }
+
+    def predict(self, home_team: str, away_team: str, max_goals: int = 6) -> dict:
+        """
+        Wrapper around predict_match() that returns the key names app.py expects,
+        plus the single most likely exact scoreline.
+        """
+        result = self.predict_match(home_team, away_team, is_home=True, max_goals=max_goals)
+        matrix = result["score_matrix"]
+
+        best_idx = np.unravel_index(np.argmax(matrix), matrix.shape)
+        best_home_goals, best_away_goals = int(best_idx[0]), int(best_idx[1])
+        best_prob = float(matrix[best_idx])
+
+        return {
+            "home_elo": result["elo_a"],
+            "away_elo": result["elo_b"],
+            "lambda_home": result["lambda_a"],
+            "lambda_away": result["lambda_b"],
+            "home_win_p": result["win_a"],
+            "draw_p": result["draw"],
+            "away_win_p": result["win_b"],
+            "matrix": matrix,
+            "best_home_goals": best_home_goals,
+            "best_away_goals": best_away_goals,
+            "best_prob": best_prob,
         }
