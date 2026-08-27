@@ -1,39 +1,681 @@
-team,player,pos,xg90,xsot90,goals,xg,minutes
-Arsenal,Bukayo Saka,FW,0.45,1.1,16,15.2,2800
-Arsenal,Kai Havertz,FW,0.42,0.95,13,12.8,2600
-Arsenal,Gabriel Martinelli,FW,0.32,0.85,8,8.1,2100
-Arsenal,Martin Ødegaard,MF,0.28,0.75,8,7.5,2900
-Arsenal,Declan Rice,MF,0.12,0.35,7,4.2,3200
-Arsenal,Gabriel Magalhães,DF,0.09,0.25,4,3.1,3100
-Arsenal,William Saliba,DF,0.04,0.1,2,1.5,3420
-Manchester City,Erling Haaland,FW,0.82,1.75,27,26.1,2550
-Manchester City,Phil Foden,FW,0.44,1.2,19,14.5,2860
-Manchester City,Julian Alvarez,FW,0.38,0.98,11,11.2,2650
-Manchester City,Kevin De Bruyne,MF,0.29,0.88,4,4.5,1220
-Manchester City,Rodri,MF,0.18,0.52,8,5.8,2930
-Manchester City,Bernardo Silva,MF,0.21,0.6,6,5.2,2580
-Manchester City,Josko Gvardiol,DF,0.11,0.3,4,3.4,2320
-Liverpool,Mohamed Salah,FW,0.65,1.5,18,18.4,2540
-Liverpool,Darwin Núñez,FW,0.68,1.62,11,16.2,2040
-Liverpool,Cody Gakpo,FW,0.41,1.02,8,8.6,1620
-Liverpool,Diogo Jota,FW,0.55,1.3,10,8.1,1160
-Liverpool,Luis Díaz,FW,0.38,0.95,8,10.1,2640
-Liverpool,Alexis Mac Allister,MF,0.16,0.45,5,4.8,2600
-Liverpool,Virgil van Dijk,DF,0.08,0.22,2,2.8,3150
-Chelsea,Cole Palmer,FW,0.58,1.35,22,18.2,2770
-Chelsea,Nicolas Jackson,FW,0.52,1.25,14,14.8,2800
-Chelsea,Noni Madueke,FW,0.35,0.9,5,4.9,1060
-Chelsea,Conor Gallagher,MF,0.19,0.5,5,5.6,3130
-Chelsea,Enzo Fernández,MF,0.15,0.4,3,3.8,2180
-Chelsea,Thiago Silva,DF,0.06,0.18,3,2.1,2620
-Tottenham,Son Heung-Min,FW,0.41,1.15,17,12.1,2940
-Tottenham,Richarlison,FW,0.54,1.2,11,9.8,1500
-Tottenham,Dejan Kulusevski,FW,0.25,0.7,8,6.8,2770
-Tottenham,James Maddison,MF,0.24,0.72,4,4.9,2100
-Tottenham,Cristian Romero,DF,0.12,0.3,5,3.6,2800
-Manchester United,Rasmus Højlund,FW,0.38,0.85,10,9.2,2170
-Manchester United,Marcus Rashford,FW,0.32,0.8,7,8.1,2260
-Manchester United,Alejandro Garnacho,FW,0.3,0.88,7,8.5,2570
-Manchester United,Bruno Fernandes,MF,0.31,0.82,10,10.8,3120
-Manchester United,Scott McTominay,MF,0.29,0.65,7,6.1,1800
-Manchester United,Harry Maguire,DF,0.09,0.25,2,2.2,1650
+team,player,pos,xg90,xsot90,goals,xg,minutes,is_placeholder_stats
+Arsenal,Bukayo Saka,FW,0.45,1.1,16.0,15.2,2800.0,False
+Chelsea,Cole Palmer,FW,0.58,1.35,22.0,18.2,2770.0,False
+Chelsea,Nicolas Jackson,FW,0.52,1.25,14.0,14.8,2800.0,False
+Chelsea,Noni Madueke,FW,0.35,0.9,5.0,4.9,1060.0,False
+Chelsea,Conor Gallagher,MF,0.19,0.5,5.0,5.6,3130.0,False
+Chelsea,Enzo Fernández,MF,0.15,0.4,3.0,3.8,2180.0,False
+Chelsea,Thiago Silva,DF,0.06,0.18,3.0,2.1,2620.0,False
+Tottenham Hotspur,Richarlison,FW,0.54,1.2,11.0,9.8,1500.0,False
+Liverpool,Virgil van Dijk,DF,0.08,0.22,2.0,2.8,3150.0,False
+Tottenham Hotspur,Dejan Kulusevski,FW,0.25,0.7,8.0,6.8,2770.0,False
+Tottenham Hotspur,Cristian Romero,DF,0.12,0.3,5.0,3.6,2800.0,False
+Manchester United,Rasmus Højlund,FW,0.38,0.85,10.0,9.2,2170.0,False
+Manchester United,Marcus Rashford,FW,0.32,0.8,7.0,8.1,2260.0,False
+Manchester United,Alejandro Garnacho,FW,0.3,0.88,7.0,8.5,2570.0,False
+Manchester United,Bruno Fernandes,MF,0.31,0.82,10.0,10.8,3120.0,False
+Manchester United,Scott McTominay,MF,0.29,0.65,7.0,6.1,1800.0,False
+Manchester United,Harry Maguire,DF,0.09,0.25,2.0,2.2,1650.0,False
+Tottenham Hotspur,James Maddison,MF,0.24,0.72,4.0,4.9,2100.0,False
+Liverpool,Alexis Mac Allister,MF,0.16,0.45,5.0,4.8,2600.0,False
+Tottenham Hotspur,Son Heung-Min,FW,0.41,1.15,17.0,12.1,2940.0,False
+Liverpool,Diogo Jota,FW,0.55,1.3,10.0,8.1,1160.0,False
+Liverpool,Luis Díaz,FW,0.38,0.95,8.0,10.1,2640.0,False
+Arsenal,Gabriel Martinelli,FW,0.32,0.85,8.0,8.1,2100.0,False
+Arsenal,Martin Ødegaard,MF,0.28,0.75,8.0,7.5,2900.0,False
+Arsenal,Declan Rice,MF,0.12,0.35,7.0,4.2,3200.0,False
+Arsenal,Gabriel Magalhães,DF,0.09,0.25,4.0,3.1,3100.0,False
+Arsenal,William Saliba,DF,0.04,0.1,2.0,1.5,3420.0,False
+Manchester City,Erling Haaland,FW,0.82,1.75,27.0,26.1,2550.0,False
+Manchester City,Phil Foden,FW,0.44,1.2,19.0,14.5,2860.0,False
+Arsenal,Kai Havertz,FW,0.42,0.95,13.0,12.8,2600.0,False
+Manchester City,Kevin De Bruyne,MF,0.29,0.88,4.0,4.5,1220.0,False
+Manchester City,Rodri,MF,0.18,0.52,8.0,5.8,2930.0,False
+Manchester City,Bernardo Silva,MF,0.21,0.6,6.0,5.2,2580.0,False
+Manchester City,Josko Gvardiol,DF,0.11,0.3,4.0,3.4,2320.0,False
+Liverpool,Mohamed Salah,FW,0.65,1.5,18.0,18.4,2540.0,False
+Liverpool,Darwin Núñez,FW,0.68,1.62,11.0,16.2,2040.0,False
+Liverpool,Cody Gakpo,FW,0.41,1.02,8.0,8.6,1620.0,False
+Manchester City,Julian Alvarez,FW,0.38,0.98,11.0,11.2,2650.0,False
+Ipswich Town,Elkan Baggott,DF,0.09,0.25,3.0,2.8,2800.0,True
+Ipswich Town,Harry Clarke,DF,0.09,0.25,3.0,2.8,2800.0,True
+Ipswich Town,Abdoul Ouattara,DF,0.09,0.25,3.0,2.8,2800.0,True
+Ipswich Town,Wes Burns,MF,0.21,0.6,6.0,5.2,2600.0,True
+Ipswich Town,Samuel Szmodics,MF,0.21,0.6,6.0,5.2,2600.0,True
+Ipswich Town,Jack Taylor,MF,0.21,0.6,6.0,5.2,2600.0,True
+Ipswich Town,Azor Matusiwa,MF,0.21,0.6,6.0,5.2,2600.0,True
+Ipswich Town,Saša Lukić,MF,0.21,0.6,6.0,5.2,2600.0,True
+Ipswich Town,Julio Enciso,MF,0.21,0.6,6.0,5.2,2600.0,True
+Ipswich Town,Marcelino Núñez,MF,0.21,0.6,6.0,5.2,2600.0,True
+Ipswich Town,Anis Mehmeti,MF,0.21,0.6,6.0,5.2,2600.0,True
+Ipswich Town,Cameron Humphreys,MF,0.21,0.6,6.0,5.2,2600.0,True
+Ipswich Town,Kasey McAteer,MF,0.21,0.6,6.0,5.2,2600.0,True
+Ipswich Town,Jack Clarke,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Ipswich Town,Chiedozie Ogbene,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Ipswich Town,Jacob Greaves,DF,0.09,0.25,3.0,2.8,2800.0,True
+Ipswich Town,Florentino,MF,0.21,0.6,6.0,5.2,2600.0,True
+Ipswich Town,Leif Davis,DF,0.09,0.25,3.0,2.8,2800.0,True
+Leeds United,Lukas Nmecha,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Ipswich Town,Dara O'Shea,DF,0.09,0.25,3.0,2.8,2800.0,True
+Ipswich Town,Chuba Akpom,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Leeds United,Daniel James,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Leeds United,Harry Wilson,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Leeds United,Noah Okafor,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Leeds United,Joël Piroe,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Leeds United,Joe Gelhardt,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Leeds United,Largie Ramazani,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Leeds United,Wilfried Gnonto,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Leeds United,Mateo Fernandez,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Ipswich Town,David Button,GK,0.305,0.835,8.0,7.8,2600.0,True
+Ipswich Town,Christian Walton,GK,0.305,0.835,8.0,7.8,2600.0,True
+Ipswich Town,Alex Palmer,GK,0.305,0.835,8.0,7.8,2600.0,True
+Ipswich Town,Kjell Scherpen,GK,0.305,0.835,8.0,7.8,2600.0,True
+Ipswich Town,Kayne van Oevelen,GK,0.305,0.835,8.0,7.8,2600.0,True
+Ipswich Town,Darnell Furlong,DF,0.09,0.25,3.0,2.8,2800.0,True
+Ipswich Town,Ben Johnson,DF,0.09,0.25,3.0,2.8,2800.0,True
+Ipswich Town,Issa Diop,DF,0.09,0.25,3.0,2.8,2800.0,True
+Ipswich Town,Cédric Kipré,DF,0.09,0.25,3.0,2.8,2800.0,True
+Ipswich Town,George Hirst,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Nottingham Forest,Murillo,DF,0.09,0.25,3.0,2.8,2800.0,True
+Ipswich Town,Jaden Philogene-Bidace,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Nottingham Forest,Ryan Yates,MF,0.21,0.6,6.0,5.2,2600.0,True
+Nottingham Forest,Ibrahim Sangaré,MF,0.21,0.6,6.0,5.2,2600.0,True
+Nottingham Forest,Xaver Schlager,MF,0.21,0.6,6.0,5.2,2600.0,True
+Nottingham Forest,Nicolás Domínguez,MF,0.21,0.6,6.0,5.2,2600.0,True
+Nottingham Forest,James McAtee,MF,0.21,0.6,6.0,5.2,2600.0,True
+Nottingham Forest,Callum Hudson-Odoi,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Nottingham Forest,Chris Wood,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Nottingham Forest,Taiwo Awoniyi,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Nottingham Forest,Dan Ndoye,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Nottingham Forest,Arnaud Kalimuendo,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Nottingham Forest,Dilane Bakwa,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Nottingham Forest,Omari Hutchinson,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Nottingham Forest,Igor Jesus,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Crystal Palace,Dean Henderson,GK,0.305,0.835,8.0,7.8,2600.0,True
+Crystal Palace,Remi Matthews,GK,0.305,0.835,8.0,7.8,2600.0,True
+Crystal Palace,Walter Benítez,GK,0.305,0.835,8.0,7.8,2600.0,True
+Crystal Palace,Owen Goodman,GK,0.305,0.835,8.0,7.8,2600.0,True
+Nottingham Forest,Morgan Gibbs-White,MF,0.21,0.6,6.0,5.2,2600.0,True
+Ipswich Town,Daizen Maeda,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Nottingham Forest,Eric da Silva Moreira,DF,0.09,0.25,3.0,2.8,2800.0,True
+Nottingham Forest,Zach Abbott,DF,0.09,0.25,3.0,2.8,2800.0,True
+Ipswich Town,Emersonn,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Ipswich Town,Ali Al-Hamadi,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Ipswich Town,Abdul Issahaku,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Ipswich Town,Sindre Egeli,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Nottingham Forest,John,GK,0.305,0.835,8.0,7.8,2600.0,True
+Nottingham Forest,Matz Sels,GK,0.305,0.835,8.0,7.8,2600.0,True
+Nottingham Forest,Steven Benda,GK,0.305,0.835,8.0,7.8,2600.0,True
+Nottingham Forest,Nikola Milenković,DF,0.09,0.25,3.0,2.8,2800.0,True
+Nottingham Forest,Ola Aina,DF,0.09,0.25,3.0,2.8,2800.0,True
+Nottingham Forest,Omar Richards,DF,0.09,0.25,3.0,2.8,2800.0,True
+Nottingham Forest,Morato,DF,0.09,0.25,3.0,2.8,2800.0,True
+Nottingham Forest,Neco Williams,DF,0.09,0.25,3.0,2.8,2800.0,True
+Nottingham Forest,Luca Netz,DF,0.09,0.25,3.0,2.8,2800.0,True
+Nottingham Forest,Jair Paula,DF,0.09,0.25,3.0,2.8,2800.0,True
+Nottingham Forest,Ousmane Diomande,DF,0.09,0.25,3.0,2.8,2800.0,True
+Nottingham Forest,Nicolò Savona,DF,0.09,0.25,3.0,2.8,2800.0,True
+Leeds United,Dominic Calvert-Lewin,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Nottingham Forest,Tyler Bindon,DF,0.09,0.25,3.0,2.8,2800.0,True
+Leeds United,Jack Harrison,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Leeds United,James Trafford,GK,0.305,0.835,8.0,7.8,2600.0,True
+Leeds United,Brenden Aaronson,MF,0.21,0.6,6.0,5.2,2600.0,True
+Tottenham Hotspur,Wilson Odobert,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Tottenham Hotspur,Mikey Moore,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Tottenham Hotspur,Min-hyuk Yang,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Tottenham Hotspur,William Lankshear,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Hull City,Jack Butland,GK,0.305,0.835,8.0,7.8,2600.0,True
+Hull City,Dillon Phillips,GK,0.305,0.835,8.0,7.8,2600.0,True
+Hull City,Harvey Cartwright,GK,0.305,0.835,8.0,7.8,2600.0,True
+Tottenham Hotspur,Mathys Tel,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Hull City,Konstantinos Tzolakis,GK,0.305,0.835,8.0,7.8,2600.0,True
+Hull City,Matt Targett,DF,0.09,0.25,3.0,2.8,2800.0,True
+Hull City,Paddy McNair,DF,0.09,0.25,3.0,2.8,2800.0,True
+Hull City,John Egan,DF,0.09,0.25,3.0,2.8,2800.0,True
+Hull City,Lewie Coyle,DF,0.09,0.25,3.0,2.8,2800.0,True
+Hull City,Semi Ajayi,DF,0.09,0.25,3.0,2.8,2800.0,True
+Hull City,Ryan John Giles,DF,0.09,0.25,3.0,2.8,2800.0,True
+Hull City,Cody Drameh,DF,0.09,0.25,3.0,2.8,2800.0,True
+Hull City,Thimothee Lo-Tutala,GK,0.305,0.835,8.0,7.8,2600.0,True
+Tottenham Hotspur,Dane Scarlett,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Tottenham Hotspur,Mohammed Kudus,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Tottenham Hotspur,Manor Solomon,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Tottenham Hotspur,Mickey van de Ven,DF,0.09,0.25,3.0,2.8,2800.0,True
+Tottenham Hotspur,Destiny Udogie,DF,0.09,0.25,3.0,2.8,2800.0,True
+Tottenham Hotspur,Ashley Phillips,DF,0.09,0.25,3.0,2.8,2800.0,True
+Tottenham Hotspur,Kota Takai,DF,0.09,0.25,3.0,2.8,2800.0,True
+Tottenham Hotspur,Souza,DF,0.09,0.25,3.0,2.8,2800.0,True
+Tottenham Hotspur,Rodrigo Bentancur,MF,0.21,0.6,6.0,5.2,2600.0,True
+Tottenham Hotspur,Sandro Tonali,MF,0.21,0.6,6.0,5.2,2600.0,True
+Tottenham Hotspur,Conor Gallagher,MF,0.21,0.6,6.0,5.2,2600.0,True
+Tottenham Hotspur,Xavi Simons,MF,0.21,0.6,6.0,5.2,2600.0,True
+Tottenham Hotspur,Pape Sarr,MF,0.21,0.6,6.0,5.2,2600.0,True
+Tottenham Hotspur,Archie Gray,MF,0.21,0.6,6.0,5.2,2600.0,True
+Tottenham Hotspur,Mateus Fernandes,MF,0.21,0.6,6.0,5.2,2600.0,True
+Tottenham Hotspur,Lucas Bergvall,MF,0.21,0.6,6.0,5.2,2600.0,True
+Tottenham Hotspur,Dominic Solanke,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Hull City,Matty Jacob,DF,0.09,0.25,3.0,2.8,2800.0,True
+Hull City,Charlie Hughes,DF,0.09,0.25,3.0,2.8,2800.0,True
+Hull City,Nobel Mendy,DF,0.09,0.25,3.0,2.8,2800.0,True
+Hull City,Lucas Herrington,DF,0.09,0.25,3.0,2.8,2800.0,True
+Crystal Palace,Nathaniel Clyne,DF,0.09,0.25,3.0,2.8,2800.0,True
+Leeds United,Nico Elvedi,DF,0.09,0.25,3.0,2.8,2800.0,True
+Leeds United,Jayden Bogle,DF,0.09,0.25,3.0,2.8,2800.0,True
+Leeds United,James Justin,DF,0.09,0.25,3.0,2.8,2800.0,True
+Leeds United,Joe Rodon,DF,0.09,0.25,3.0,2.8,2800.0,True
+Leeds United,Maximilian Wöber,DF,0.09,0.25,3.0,2.8,2800.0,True
+Leeds United,Sam Byram,DF,0.09,0.25,3.0,2.8,2800.0,True
+Leeds United,Sebastiaan Bornauw,DF,0.09,0.25,3.0,2.8,2800.0,True
+Leeds United,Gabriel Gudmundsson,DF,0.09,0.25,3.0,2.8,2800.0,True
+Leeds United,Jaka Bijol,DF,0.09,0.25,3.0,2.8,2800.0,True
+Leeds United,Isaac Schmidt,DF,0.09,0.25,3.0,2.8,2800.0,True
+Leeds United,Tarik Muharemović,DF,0.09,0.25,3.0,2.8,2800.0,True
+Leeds United,Sean Longstaff,MF,0.21,0.6,6.0,5.2,2600.0,True
+Leeds United,Ethan Ampadu,MF,0.21,0.6,6.0,5.2,2600.0,True
+Leeds United,Ao Tanaka,MF,0.21,0.6,6.0,5.2,2600.0,True
+Leeds United,Anton Stach,MF,0.21,0.6,6.0,5.2,2600.0,True
+Leeds United,Ilia Gruev,MF,0.21,0.6,6.0,5.2,2600.0,True
+Leeds United,Alex Cairns,GK,0.305,0.835,8.0,7.8,2600.0,True
+Leeds United,Charlie Crewe,MF,0.21,0.6,6.0,5.2,2600.0,True
+Leeds United,Lucas Perri,GK,0.305,0.835,8.0,7.8,2600.0,True
+Hull City,Abu Kamara,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Hull City,Regan Slater,MF,0.21,0.6,6.0,5.2,2600.0,True
+Hull City,Matty Crooks,MF,0.21,0.6,6.0,5.2,2600.0,True
+Hull City,Kieran Dowell,MF,0.21,0.6,6.0,5.2,2600.0,True
+Hull City,Abdülkadir Ömür,MF,0.21,0.6,6.0,5.2,2600.0,True
+Hull City,Hidemasa Morita,MF,0.21,0.6,6.0,5.2,2600.0,True
+Hull City,Eliot Matazo,MF,0.21,0.6,6.0,5.2,2600.0,True
+Hull City,Lucas Gourna-Douath,MF,0.21,0.6,6.0,5.2,2600.0,True
+Hull City,Darko Gyabi,MF,0.21,0.6,6.0,5.2,2600.0,True
+Hull City,Elliot Stroud,MF,0.21,0.6,6.0,5.2,2600.0,True
+Hull City,Jens Hjertö-Dahl,MF,0.21,0.6,6.0,5.2,2600.0,True
+Hull City,Óscar Zambrano,MF,0.21,0.6,6.0,5.2,2600.0,True
+Hull City,Oliver McBurnie,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Hull City,Joe Gelhardt,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Hull City,Liam Millar,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Hull City,Enis Destan,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Hull City,David Akintola,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Hull City,Mason Burstow,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Hull City,Mohamed Belloumi,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Crystal Palace,Takehiro Tomiyasu,DF,0.09,0.25,3.0,2.8,2800.0,True
+Crystal Palace,Jean-Philippe Mateta,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Crystal Palace,Daniel Muñoz,DF,0.09,0.25,3.0,2.8,2800.0,True
+AFC Bournemouth,Adam Smith,DF,0.09,0.25,3.0,2.8,2800.0,True
+AFC Bournemouth,Max Aarons,DF,0.09,0.25,3.0,2.8,2800.0,True
+AFC Bournemouth,James Hill,DF,0.09,0.25,3.0,2.8,2800.0,True
+AFC Bournemouth,Bafodé Diakité,DF,0.09,0.25,3.0,2.8,2800.0,True
+AFC Bournemouth,Julian Araujo,DF,0.09,0.25,3.0,2.8,2800.0,True
+AFC Bournemouth,Adrien Truffert,DF,0.09,0.25,3.0,2.8,2800.0,True
+AFC Bournemouth,Juanlu,DF,0.09,0.25,3.0,2.8,2800.0,True
+AFC Bournemouth,Will Dennis,GK,0.305,0.835,8.0,7.8,2600.0,True
+AFC Bournemouth,Julio Soler,DF,0.09,0.25,3.0,2.8,2800.0,True
+AFC Bournemouth,Matai Akinmboni,DF,0.09,0.25,3.0,2.8,2800.0,True
+AFC Bournemouth,Veljko Milosavljević,DF,0.09,0.25,3.0,2.8,2800.0,True
+AFC Bournemouth,Lewis Cook,MF,0.21,0.6,6.0,5.2,2600.0,True
+AFC Bournemouth,Marcus Tavernier,MF,0.21,0.6,6.0,5.2,2600.0,True
+AFC Bournemouth,Justin Kluivert,MF,0.21,0.6,6.0,5.2,2600.0,True
+AFC Bournemouth,Ryan Christie,MF,0.21,0.6,6.0,5.2,2600.0,True
+AFC Bournemouth,Tyler Adams,MF,0.21,0.6,6.0,5.2,2600.0,True
+AFC Bournemouth,Antonio Silva,DF,0.09,0.25,3.0,2.8,2800.0,True
+AFC Bournemouth,Đorđe Petrović,GK,0.305,0.835,8.0,7.8,2600.0,True
+AFC Bournemouth,Fraser Forster,GK,0.305,0.835,8.0,7.8,2600.0,True
+Brentford,Kaye Furo,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Brentford,Jordan Henderson,MF,0.21,0.6,6.0,5.2,2600.0,True
+Brentford,Josh Dasilva,MF,0.21,0.6,6.0,5.2,2600.0,True
+Brentford,Vitaly Janelt,MF,0.21,0.6,6.0,5.2,2600.0,True
+Brentford,Mathias Jensen,MF,0.21,0.6,6.0,5.2,2600.0,True
+Brentford,Mikkel Damsgaard,MF,0.21,0.6,6.0,5.2,2600.0,True
+Brentford,Keane Lewis-Potter,MF,0.21,0.6,6.0,5.2,2600.0,True
+Brentford,Mamadou Sangare,MF,0.21,0.6,6.0,5.2,2600.0,True
+Brentford,Fabio Carvalho,MF,0.21,0.6,6.0,5.2,2600.0,True
+Brentford,Antoni Milambo,MF,0.21,0.6,6.0,5.2,2600.0,True
+Brentford,Yegor Yarmolyuk,MF,0.21,0.6,6.0,5.2,2600.0,True
+Brentford,Yunus Konak,MF,0.21,0.6,6.0,5.2,2600.0,True
+Brentford,Callum Wilson,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Brentford,Kevin Schade,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Brentford,Thiago,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Brentford,Jaidon Anthony,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Brentford,Dango Ouattara,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Brentford,Gustavo Gomes,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+AFC Bournemouth,Alex Scott,MF,0.21,0.6,6.0,5.2,2600.0,True
+AFC Bournemouth,Alex Toth,MF,0.21,0.6,6.0,5.2,2600.0,True
+AFC Bournemouth,Ben Winterburn,MF,0.21,0.6,6.0,5.2,2600.0,True
+AFC Bournemouth,David Brooks,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Coventry City,Ephron Mason-Clark,MF,0.21,0.6,6.0,5.2,2600.0,True
+Coventry City,Matt Grimes,MF,0.21,0.6,6.0,5.2,2600.0,True
+Coventry City,Gustavo Hamer,MF,0.21,0.6,6.0,5.2,2600.0,True
+Coventry City,Victor Torp,MF,0.21,0.6,6.0,5.2,2600.0,True
+Coventry City,Frank Onyeka,MF,0.21,0.6,6.0,5.2,2600.0,True
+Coventry City,Josh Eccles,MF,0.21,0.6,6.0,5.2,2600.0,True
+Coventry City,Jack Rudoni,MF,0.21,0.6,6.0,5.2,2600.0,True
+Coventry City,Kai Andrews,MF,0.21,0.6,6.0,5.2,2600.0,True
+Coventry City,Caleb Yirenkyi,MF,0.21,0.6,6.0,5.2,2600.0,True
+Coventry City,Brandon Thomas-Asante,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Coventry City,Taiwo Awoniyi,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Coventry City,Haji Wright,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Coventry City,Tatsuhiro Sakamoto,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Coventry City,Raphael Borges Rodrigues,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Coventry City,Ellis Simms,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Coventry City,Loum Tchaouna,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Coventry City,Norman Bassette,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Coventry City,Miguel Angel Brau,DF,0.09,0.25,3.0,2.8,2800.0,True
+Brentford,Benjamin Arthur,DF,0.09,0.25,3.0,2.8,2800.0,True
+Coventry City,Kaine Kesler,DF,0.09,0.25,3.0,2.8,2800.0,True
+Coventry City,Bobby Thomas,DF,0.09,0.25,3.0,2.8,2800.0,True
+AFC Bournemouth,Enes Ünal,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+AFC Bournemouth,Evanilson,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+AFC Bournemouth,Amine Adli,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+AFC Bournemouth,Daniel Jebbison,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+AFC Bournemouth,Ben Doak,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+AFC Bournemouth,Alvaro Rodriguez,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+AFC Bournemouth,Rayan,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+AFC Bournemouth,Eli Kroupi,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Coventry City,Ben Wilson,GK,0.305,0.835,8.0,7.8,2600.0,True
+Coventry City,Oliver Dovin,GK,0.305,0.835,8.0,7.8,2600.0,True
+Coventry City,Carl Rushworth,GK,0.305,0.835,8.0,7.8,2600.0,True
+Coventry City,Jake Bidwell,DF,0.09,0.25,3.0,2.8,2800.0,True
+Coventry City,Luke Woolfenden,DF,0.09,0.25,3.0,2.8,2800.0,True
+Coventry City,Jay Dasilva,DF,0.09,0.25,3.0,2.8,2800.0,True
+Coventry City,Liam Kitching,DF,0.09,0.25,3.0,2.8,2800.0,True
+Coventry City,Milan van Ewijk,DF,0.09,0.25,3.0,2.8,2800.0,True
+Coventry City,Joel Latibeaudiere,DF,0.09,0.25,3.0,2.8,2800.0,True
+Coventry City,Aurele Amenda,DF,0.09,0.25,3.0,2.8,2800.0,True
+Crystal Palace,Borna Sosa,DF,0.09,0.25,3.0,2.8,2800.0,True
+Brentford,Benjamin Fredrick,DF,0.09,0.25,3.0,2.8,2800.0,True
+Brentford,Ji-soo Kim,DF,0.09,0.25,3.0,2.8,2800.0,True
+Crystal Palace,Evann Guessand,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Crystal Palace,Yeremi Pino,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Crystal Palace,Matheus Franca,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Crystal Palace,Jesurun Rak-Sakyi,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Crystal Palace,Romain Esse,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Crystal Palace,Jørgen Strand Larsen,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Crystal Palace,Zavier Gozo,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Crystal Palace,Brennan Johnson,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Brighton & Hove Albion,Jason Steele,GK,0.305,0.835,8.0,7.8,2600.0,True
+Brighton & Hove Albion,Thomas McGill,GK,0.305,0.835,8.0,7.8,2600.0,True
+Brighton & Hove Albion,Carl Rushworth,GK,0.305,0.835,8.0,7.8,2600.0,True
+Brighton & Hove Albion,James Beadle,GK,0.305,0.835,8.0,7.8,2600.0,True
+Brighton & Hove Albion,Olivier Boscagli,DF,0.09,0.25,3.0,2.8,2800.0,True
+Brighton & Hove Albion,Pascal Struijk,DF,0.09,0.25,3.0,2.8,2800.0,True
+Brighton & Hove Albion,Lewis Dunk,DF,0.09,0.25,3.0,2.8,2800.0,True
+Brighton & Hove Albion,Ferdi Kadıoğlu,DF,0.09,0.25,3.0,2.8,2800.0,True
+Brighton & Hove Albion,Bart Verbruggen,GK,0.305,0.835,8.0,7.8,2600.0,True
+Crystal Palace,Dwight McNeil,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Crystal Palace,Eddie Nketiah,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Crystal Palace,Ismaïla Sarr,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Crystal Palace,Maxence Lacroix,DF,0.09,0.25,3.0,2.8,2800.0,True
+Crystal Palace,Chris Richards,DF,0.09,0.25,3.0,2.8,2800.0,True
+Crystal Palace,Tyrick Mitchell,DF,0.09,0.25,3.0,2.8,2800.0,True
+Crystal Palace,Óscar Mingueza,DF,0.09,0.25,3.0,2.8,2800.0,True
+Crystal Palace,Chadi Riad,DF,0.09,0.25,3.0,2.8,2800.0,True
+Crystal Palace,Anan Khalaili,DF,0.09,0.25,3.0,2.8,2800.0,True
+Crystal Palace,Jaydee Canvot,DF,0.09,0.25,3.0,2.8,2800.0,True
+Crystal Palace,Caleb Kporha,DF,0.09,0.25,3.0,2.8,2800.0,True
+Crystal Palace,Rio Cardines,DF,0.09,0.25,3.0,2.8,2800.0,True
+Crystal Palace,Jefferson Lerma,MF,0.21,0.6,6.0,5.2,2600.0,True
+Crystal Palace,Daichi Kamada,MF,0.21,0.6,6.0,5.2,2600.0,True
+Crystal Palace,Will Hughes,MF,0.21,0.6,6.0,5.2,2600.0,True
+Crystal Palace,Cheick Doucouré,MF,0.21,0.6,6.0,5.2,2600.0,True
+Crystal Palace,Justin Devenny,MF,0.21,0.6,6.0,5.2,2600.0,True
+Crystal Palace,David Ozoh,MF,0.21,0.6,6.0,5.2,2600.0,True
+Crystal Palace,Adam Wharton,MF,0.21,0.6,6.0,5.2,2600.0,True
+Tottenham Hotspur,Jan Paul van Hecke,DF,0.09,0.25,3.0,2.8,2800.0,True
+Brighton & Hove Albion,Igor Julio,DF,0.09,0.25,3.0,2.8,2800.0,True
+Brighton & Hove Albion,Michael Svoboda,DF,0.09,0.25,3.0,2.8,2800.0,True
+Brighton & Hove Albion,Mats Wieffer,DF,0.09,0.25,3.0,2.8,2800.0,True
+Brighton & Hove Albion,Maxim De Cuyper,DF,0.09,0.25,3.0,2.8,2800.0,True
+Brighton & Hove Albion,Promise Akinpelu,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Brighton & Hove Albion,Charalampos Kostoulas,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Brighton & Hove Albion,Zadok Yohanna,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Brighton & Hove Albion,Rodrigo Rêgo,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Brentford,Ellery Balcombe,GK,0.305,0.835,8.0,7.8,2600.0,True
+Brentford,Caoimhin Kelleher,GK,0.305,0.835,8.0,7.8,2600.0,True
+Brentford,Hákon Rafn Valdimarsson,GK,0.305,0.835,8.0,7.8,2600.0,True
+Brentford,Matthew Cox,GK,0.305,0.835,8.0,7.8,2600.0,True
+Brentford,Julian Eyestone,GK,0.305,0.835,8.0,7.8,2600.0,True
+Brentford,Ethan Pinnock,DF,0.09,0.25,3.0,2.8,2800.0,True
+Brentford,Rico Henry,DF,0.09,0.25,3.0,2.8,2800.0,True
+Brentford,Sepp van den Berg,DF,0.09,0.25,3.0,2.8,2800.0,True
+Brentford,Kristoffer Ajer,DF,0.09,0.25,3.0,2.8,2800.0,True
+Brentford,Aaron Hickey,DF,0.09,0.25,3.0,2.8,2800.0,True
+Brentford,Nathan Collins,DF,0.09,0.25,3.0,2.8,2800.0,True
+Brentford,Michael Kayode,DF,0.09,0.25,3.0,2.8,2800.0,True
+Brentford,Jayden Meghoma,DF,0.09,0.25,3.0,2.8,2800.0,True
+Brighton & Hove Albion,Stefanos Tzimas,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Brentford,Jannik Schuster,DF,0.09,0.25,3.0,2.8,2800.0,True
+Brighton & Hove Albion,Ibrahim Osman,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Brighton & Hove Albion,Tom Watson,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Brighton & Hove Albion,Eiran Cashin,DF,0.09,0.25,3.0,2.8,2800.0,True
+Brighton & Hove Albion,Diego Coppola,DF,0.09,0.25,3.0,2.8,2800.0,True
+Brighton & Hove Albion,Costinha,DF,0.09,0.25,3.0,2.8,2800.0,True
+Brighton & Hove Albion,Luka Vušković,DF,0.09,0.25,3.0,2.8,2800.0,True
+Brighton & Hove Albion,Matt O'Riley,MF,0.21,0.6,6.0,5.2,2600.0,True
+Brighton & Hove Albion,Pascal Groß,MF,0.21,0.6,6.0,5.2,2600.0,True
+Brighton & Hove Albion,Yasin Ayari,MF,0.21,0.6,6.0,5.2,2600.0,True
+Brighton & Hove Albion,Carlos Baleba,MF,0.21,0.6,6.0,5.2,2600.0,True
+Brighton & Hove Albion,Diego Gómez,MF,0.21,0.6,6.0,5.2,2600.0,True
+Brighton & Hove Albion,Facundo Buonanotte,MF,0.21,0.6,6.0,5.2,2600.0,True
+Brighton & Hove Albion,Jack Hinshelwood,MF,0.21,0.6,6.0,5.2,2600.0,True
+Brighton & Hove Albion,Malick Yalcouyé,MF,0.21,0.6,6.0,5.2,2600.0,True
+Brighton & Hove Albion,Danny Welbeck,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Brighton & Hove Albion,Georginio Rutter,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Brighton & Hove Albion,Evan Ferguson,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Brighton & Hove Albion,Kaoru Mitoma,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Brighton & Hove Albion,Yankubah Minteh,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Brighton & Hove Albion,Amario Cozier-Duberry,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Tottenham Hotspur,Pedro Porro,DF,0.09,0.25,3.0,2.8,2800.0,True
+Sunderland,Wilson Isidor,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Tottenham Hotspur,Marcos Senesi,DF,0.09,0.25,3.0,2.8,2800.0,True
+Chelsea,Geovany Quenda,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Chelsea,Estevao,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Everton,Jordan Pickford,GK,0.305,0.835,8.0,7.8,2600.0,True
+Everton,Thomas King,GK,0.305,0.835,8.0,7.8,2600.0,True
+Everton,Mark Travers,GK,0.305,0.835,8.0,7.8,2600.0,True
+Everton,James Tarkowski,DF,0.09,0.25,3.0,2.8,2800.0,True
+Everton,Michael Keane,DF,0.09,0.25,3.0,2.8,2800.0,True
+Chelsea,Marc Guiu,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Everton,Vitalii Mykolenko,DF,0.09,0.25,3.0,2.8,2800.0,True
+Everton,Jake O'Brien,DF,0.09,0.25,3.0,2.8,2800.0,True
+Everton,Nathan Patterson,DF,0.09,0.25,3.0,2.8,2800.0,True
+Everton,Adam Aznou,DF,0.09,0.25,3.0,2.8,2800.0,True
+Everton,Christian Nørgaard,MF,0.21,0.6,6.0,5.2,2600.0,True
+Everton,James Garner,MF,0.21,0.6,6.0,5.2,2600.0,True
+Everton,Hayden Hackney,MF,0.21,0.6,6.0,5.2,2600.0,True
+Everton,Kiernan Dewsbury Hall,MF,0.21,0.6,6.0,5.2,2600.0,True
+Everton,Jarrad Branthwaite,DF,0.09,0.25,3.0,2.8,2800.0,True
+Chelsea,Alejandro Garnacho,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Chelsea,Jamie Bynoe-Gittens,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Chelsea,Aaron Anselmino,DF,0.09,0.25,3.0,2.8,2800.0,True
+Chelsea,Josh Acheampong,DF,0.09,0.25,3.0,2.8,2800.0,True
+Chelsea,Denner,DF,0.09,0.25,3.0,2.8,2800.0,True
+Chelsea,Jordan Henderson,MF,0.21,0.6,6.0,5.2,2600.0,True
+Chelsea,Morgan Rogers,MF,0.21,0.6,6.0,5.2,2600.0,True
+Chelsea,Moisés Caicedo,MF,0.21,0.6,6.0,5.2,2600.0,True
+Chelsea,Dario Essugo,MF,0.21,0.6,6.0,5.2,2600.0,True
+Chelsea,Valentin Barco,MF,0.21,0.6,6.0,5.2,2600.0,True
+Chelsea,Romeo Lavia,MF,0.21,0.6,6.0,5.2,2600.0,True
+Chelsea,Pedro Neto,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Chelsea,Danny Welbeck,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Chelsea,Mykhailo Mudryk,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Chelsea,João Pedro,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Chelsea,Emanuel Emegha,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Chelsea,Liam Delap,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Everton,Carlos Alcaraz,MF,0.21,0.6,6.0,5.2,2600.0,True
+Everton,Merlin Röhl,MF,0.21,0.6,6.0,5.2,2600.0,True
+Everton,Tim Iroegbunam,MF,0.21,0.6,6.0,5.2,2600.0,True
+Everton,Harrison Armstrong,MF,0.21,0.6,6.0,5.2,2600.0,True
+Fulham,Sander Berge,MF,0.21,0.6,6.0,5.2,2600.0,True
+Fulham,Saša Lukić,MF,0.21,0.6,6.0,5.2,2600.0,True
+Fulham,Emile Smith Rowe,MF,0.21,0.6,6.0,5.2,2600.0,True
+Fulham,Luke Harris,MF,0.21,0.6,6.0,5.2,2600.0,True
+Fulham,Shea Charles,MF,0.21,0.6,6.0,5.2,2600.0,True
+Fulham,Joshua King,MF,0.21,0.6,6.0,5.2,2600.0,True
+Fulham,César Palacios,MF,0.21,0.6,6.0,5.2,2600.0,True
+Fulham,Alex Iwobi,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Fulham,Rodrigo Muniz,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Fulham,Kevin Santos,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Fulham,Oscar Bobb,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Fulham,Jonah Kusi-Asare,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Fulham,Gonzalo García,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Liverpool,Alisson Becker,GK,0.305,0.835,8.0,7.8,2600.0,True
+Liverpool,Freddie Woodman,GK,0.305,0.835,8.0,7.8,2600.0,True
+Liverpool,Giorgi Mamardashvili,GK,0.305,0.835,8.0,7.8,2600.0,True
+Liverpool,Vítězslav Jaroš,GK,0.305,0.835,8.0,7.8,2600.0,True
+Fulham,Harrison Reed,MF,0.21,0.6,6.0,5.2,2600.0,True
+Chelsea,Marco Palestra,DF,0.09,0.25,3.0,2.8,2800.0,True
+Fulham,Tom Cairney,MF,0.21,0.6,6.0,5.2,2600.0,True
+Fulham,Calvin Bassey,DF,0.09,0.25,3.0,2.8,2800.0,True
+Everton,Dwight McNeil,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Everton,Iliman Ndiaye,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Everton,Brennan Johnson,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Everton,Beto,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Everton,Thierno Barry,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Everton,Tyler Dibling,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Everton,Tyrique George,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Everton,Harvey Foster,,0.305,0.835,8.0,7.8,2600.0,True
+Fulham,Bernd Leno,GK,0.305,0.835,8.0,7.8,2600.0,True
+Fulham,Benjamin Lecomte,GK,0.305,0.835,8.0,7.8,2600.0,True
+Fulham,Timothy Castagne,DF,0.09,0.25,3.0,2.8,2800.0,True
+Fulham,Joachim Andersen,DF,0.09,0.25,3.0,2.8,2800.0,True
+Fulham,Antonee Robinson,DF,0.09,0.25,3.0,2.8,2800.0,True
+Fulham,Ryan Sessegnon,DF,0.09,0.25,3.0,2.8,2800.0,True
+Fulham,Issa Diop,DF,0.09,0.25,3.0,2.8,2800.0,True
+Fulham,Kenny Tete,DF,0.09,0.25,3.0,2.8,2800.0,True
+Fulham,Jorge Cuenca,DF,0.09,0.25,3.0,2.8,2800.0,True
+Fulham,Luc De Fougerolles,DF,0.09,0.25,3.0,2.8,2800.0,True
+Liverpool,Harvey Davies,GK,0.305,0.835,8.0,7.8,2600.0,True
+Chelsea,Mamadou Sarr,DF,0.09,0.25,3.0,2.8,2800.0,True
+Chelsea,Caleb Wiley,DF,0.09,0.25,3.0,2.8,2800.0,True
+Arsenal,Gabriel Jesus,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Arsenal,Reiss Nelson,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Arsenal,Viktor Gyökeres,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Arsenal,Martinelli,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Arsenal,Christos Tzolis,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Arsenal,Ethan Nwaneri,MF,0.21,0.6,6.0,5.2,2600.0,True
+Arsenal,Noni Madueke,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Aston Villa,Emiliano Martínez,GK,0.305,0.835,8.0,7.8,2600.0,True
+Aston Villa,Marco Bizot,GK,0.305,0.835,8.0,7.8,2600.0,True
+Aston Villa,Joe Gauci,GK,0.305,0.835,8.0,7.8,2600.0,True
+Aston Villa,Zion Suzuki,GK,0.305,0.835,8.0,7.8,2600.0,True
+Aston Villa,Oliwier Zych,GK,0.305,0.835,8.0,7.8,2600.0,True
+Aston Villa,Lucas Digne,DF,0.09,0.25,3.0,2.8,2800.0,True
+Aston Villa,Victor Nilsson-Lindelöf,DF,0.09,0.25,3.0,2.8,2800.0,True
+Arsenal,Max Dowman,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Arsenal,Martín Zubimendi,MF,0.21,0.6,6.0,5.2,2600.0,True
+Arsenal,Fabio Vieira,MF,0.21,0.6,6.0,5.2,2600.0,True
+Arsenal,Christian Nørgaard,MF,0.21,0.6,6.0,5.2,2600.0,True
+Arsenal,Kepa Arrizabalaga,GK,0.305,0.835,8.0,7.8,2600.0,True
+Arsenal,David Raya,GK,0.305,0.835,8.0,7.8,2600.0,True
+Arsenal,Illan Meslier,GK,0.305,0.835,8.0,7.8,2600.0,True
+Arsenal,Tommy Setford,GK,0.305,0.835,8.0,7.8,2600.0,True
+Arsenal,Ben White,DF,0.09,0.25,3.0,2.8,2800.0,True
+Arsenal,Jurrien Timber,DF,0.09,0.25,3.0,2.8,2800.0,True
+Arsenal,Piero Hincapié,DF,0.09,0.25,3.0,2.8,2800.0,True
+Arsenal,Riccardo Calafiori,DF,0.09,0.25,3.0,2.8,2800.0,True
+Arsenal,Cristhian Mosquera,DF,0.09,0.25,3.0,2.8,2800.0,True
+Arsenal,Myles Lewis-Skelly,DF,0.09,0.25,3.0,2.8,2800.0,True
+Arsenal,Bruno Guimarães,MF,0.21,0.6,6.0,5.2,2600.0,True
+Arsenal,Eberechi Eze,MF,0.21,0.6,6.0,5.2,2600.0,True
+Arsenal,Mikel Merino,MF,0.21,0.6,6.0,5.2,2600.0,True
+Aston Villa,Ezri Konsa,DF,0.09,0.25,3.0,2.8,2800.0,True
+Aston Villa,Tyrone Mings,DF,0.09,0.25,3.0,2.8,2800.0,True
+Aston Villa,Matty Cash,DF,0.09,0.25,3.0,2.8,2800.0,True
+Aston Villa,Pau Torres,DF,0.09,0.25,3.0,2.8,2800.0,True
+Aston Villa,Alysson,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Aston Villa,Brian Madjo,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Chelsea,Robert Sánchez,GK,0.305,0.835,8.0,7.8,2600.0,True
+Chelsea,Gabriel Slonina,GK,0.305,0.835,8.0,7.8,2600.0,True
+Chelsea,Filip Jörgensen,GK,0.305,0.835,8.0,7.8,2600.0,True
+Chelsea,Teddy Sharman-Lowe,GK,0.305,0.835,8.0,7.8,2600.0,True
+Chelsea,Mike Penders,GK,0.305,0.835,8.0,7.8,2600.0,True
+Chelsea,Axel Disasi,DF,0.09,0.25,3.0,2.8,2800.0,True
+Chelsea,Trevoh Chalobah,DF,0.09,0.25,3.0,2.8,2800.0,True
+Chelsea,Tosin Adarabioyo,DF,0.09,0.25,3.0,2.8,2800.0,True
+Chelsea,Wesley Fofana,DF,0.09,0.25,3.0,2.8,2800.0,True
+Chelsea,Reece James,DF,0.09,0.25,3.0,2.8,2800.0,True
+Chelsea,Maxence Lacroix,DF,0.09,0.25,3.0,2.8,2800.0,True
+Chelsea,Pep Chavarría,DF,0.09,0.25,3.0,2.8,2800.0,True
+Chelsea,Malo Gusto,DF,0.09,0.25,3.0,2.8,2800.0,True
+Chelsea,Benoît Badiashile,DF,0.09,0.25,3.0,2.8,2800.0,True
+Chelsea,Levi Colwill,DF,0.09,0.25,3.0,2.8,2800.0,True
+Aston Villa,Alejandro Garnacho,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Chelsea,Jorrel Hato,DF,0.09,0.25,3.0,2.8,2800.0,True
+Aston Villa,Lewis Dobbin,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Aston Villa,Emiliano Buendía,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Aston Villa,Ian Maatsen,DF,0.09,0.25,3.0,2.8,2800.0,True
+Aston Villa,Matteo Ruggeri,DF,0.09,0.25,3.0,2.8,2800.0,True
+Aston Villa,Andrés Garcia,DF,0.09,0.25,3.0,2.8,2800.0,True
+Aston Villa,Kosta Nedeljković,DF,0.09,0.25,3.0,2.8,2800.0,True
+Aston Villa,Modou Keba Cisse,DF,0.09,0.25,3.0,2.8,2800.0,True
+Aston Villa,Ross Barkley,MF,0.21,0.6,6.0,5.2,2600.0,True
+Aston Villa,Boubacar Kamara,MF,0.21,0.6,6.0,5.2,2600.0,True
+Aston Villa,John McGinn,MF,0.21,0.6,6.0,5.2,2600.0,True
+Aston Villa,Morgan Rogers,MF,0.21,0.6,6.0,5.2,2600.0,True
+Aston Villa,Amadou Onana,MF,0.21,0.6,6.0,5.2,2600.0,True
+Aston Villa,João Gomes,MF,0.21,0.6,6.0,5.2,2600.0,True
+Aston Villa,Lamare Bogarde,MF,0.21,0.6,6.0,5.2,2600.0,True
+Aston Villa,Johan Manzambi,MF,0.21,0.6,6.0,5.2,2600.0,True
+Aston Villa,George Hemmings,MF,0.21,0.6,6.0,5.2,2600.0,True
+Aston Villa,Leon Bailey,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Aston Villa,Ollie Watkins,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Aston Villa,Tammy Abraham,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Aston Villa,Evann Guessand,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Liverpool,Kostas Tsimikas,DF,0.09,0.25,3.0,2.8,2800.0,True
+Liverpool,Joe Gomez,DF,0.09,0.25,3.0,2.8,2800.0,True
+Newcastle United,Lewis Hall,DF,0.09,0.25,3.0,2.8,2800.0,True
+Newcastle United,Alex Murphy,DF,0.09,0.25,3.0,2.8,2800.0,True
+Newcastle United,Leo Shahar,DF,0.09,0.25,3.0,2.8,2800.0,True
+Newcastle United,Bruno Guimarães,MF,0.21,0.6,6.0,5.2,2600.0,True
+Newcastle United,Joe Willock,MF,0.21,0.6,6.0,5.2,2600.0,True
+Newcastle United,Joelinton,MF,0.21,0.6,6.0,5.2,2600.0,True
+Newcastle United,Jacob Ramsey,MF,0.21,0.6,6.0,5.2,2600.0,True
+Newcastle United,Valentino Livramento,DF,0.09,0.25,3.0,2.8,2800.0,True
+Newcastle United,Joe White,MF,0.21,0.6,6.0,5.2,2600.0,True
+Newcastle United,Sean Steur,MF,0.21,0.6,6.0,5.2,2600.0,True
+Newcastle United,Aladji Bamba,MF,0.21,0.6,6.0,5.2,2600.0,True
+Newcastle United,Yoane Wissa,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Newcastle United,Jacob Murphy,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Newcastle United,Harvey Barnes,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Newcastle United,Nick Woltemade,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Newcastle United,Anthony Elanga,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Newcastle United,Lewis Miley,MF,0.21,0.6,6.0,5.2,2600.0,True
+Newcastle United,Malick Thiaw,DF,0.09,0.25,3.0,2.8,2800.0,True
+Newcastle United,Amar Dedić,DF,0.09,0.25,3.0,2.8,2800.0,True
+Newcastle United,Sven Botman,DF,0.09,0.25,3.0,2.8,2800.0,True
+Manchester United,Jacob Devaney,MF,0.21,0.6,6.0,5.2,2600.0,True
+Manchester United,Bryan Mbeumo,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Manchester United,Matheus Cunha,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Manchester United,Joshua Zirkzee,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Manchester United,Benjamin Šeško,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Manchester United,Amad Diallo,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Manchester United,Ethan Wheatley,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Manchester United,Chido Obi-Martin,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Manchester United,Shea Lacey,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Newcastle United,Nick Pope,GK,0.305,0.835,8.0,7.8,2600.0,True
+Newcastle United,Mark Gillespie,GK,0.305,0.835,8.0,7.8,2600.0,True
+Newcastle United,Lukáš Horníček,GK,0.305,0.835,8.0,7.8,2600.0,True
+Newcastle United,Ewen Jaouen,GK,0.305,0.835,8.0,7.8,2600.0,True
+Newcastle United,Aidan Harris,GK,0.305,0.835,8.0,7.8,2600.0,True
+Newcastle United,Fabian Schär,DF,0.09,0.25,3.0,2.8,2800.0,True
+Newcastle United,Dan Burn,DF,0.09,0.25,3.0,2.8,2800.0,True
+Newcastle United,William Osula,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Newcastle United,Bazoumana Touré,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Sunderland,Simon Moore,GK,0.305,0.835,8.0,7.8,2600.0,True
+Sunderland,Anthony Patterson,GK,0.305,0.835,8.0,7.8,2600.0,True
+Coventry City,Jahnoah Markelo,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Sunderland,Brian Brobbey,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Sunderland,Simon Adingra,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Sunderland,Romaine Mundle,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Sunderland,Nilson Angulo,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Sunderland,Ahmed Abdullahi,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Sunderland,Chemsdine Talbi,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Sunderland,Luís Semedo,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Sunderland,Jocelin Bi,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Tottenham Hotspur,Guglielmo Vicario,GK,0.305,0.835,8.0,7.8,2600.0,True
+Tottenham Hotspur,Martin Dúbravka,GK,0.305,0.835,8.0,7.8,2600.0,True
+Tottenham Hotspur,Brandon Austin,GK,0.305,0.835,8.0,7.8,2600.0,True
+Tottenham Hotspur,Antonín Kinský,GK,0.305,0.835,8.0,7.8,2600.0,True
+Tottenham Hotspur,Kevin Danso,DF,0.09,0.25,3.0,2.8,2800.0,True
+Tottenham Hotspur,Andrew Robertson,DF,0.09,0.25,3.0,2.8,2800.0,True
+Tottenham Hotspur,Ben Davies,DF,0.09,0.25,3.0,2.8,2800.0,True
+Tottenham Hotspur,Christian Romero,DF,0.09,0.25,3.0,2.8,2800.0,True
+Sunderland,Chris Rigg,MF,0.21,0.6,6.0,5.2,2600.0,True
+Manchester United,Tyler Fletcher,MF,0.21,0.6,6.0,5.2,2600.0,True
+Sunderland,Noah Sadiki,MF,0.21,0.6,6.0,5.2,2600.0,True
+Sunderland,Abdoullah Ba,MF,0.21,0.6,6.0,5.2,2600.0,True
+Sunderland,Robin Roefs,GK,0.305,0.835,8.0,7.8,2600.0,True
+Sunderland,Melker Ellborg,GK,0.305,0.835,8.0,7.8,2600.0,True
+Sunderland,Thomas Meunier,DF,0.09,0.25,3.0,2.8,2800.0,True
+Sunderland,Luke O'Nien,DF,0.09,0.25,3.0,2.8,2800.0,True
+Sunderland,Arthur Masuaku,DF,0.09,0.25,3.0,2.8,2800.0,True
+Sunderland,Nordi Mukiele,DF,0.09,0.25,3.0,2.8,2800.0,True
+Sunderland,Reinildo,DF,0.09,0.25,3.0,2.8,2800.0,True
+Sunderland,Omar Alderete,DF,0.09,0.25,3.0,2.8,2800.0,True
+Sunderland,Trai Hume,DF,0.09,0.25,3.0,2.8,2800.0,True
+Sunderland,Daniel Ballard,DF,0.09,0.25,3.0,2.8,2800.0,True
+Sunderland,Timothee Pembele,DF,0.09,0.25,3.0,2.8,2800.0,True
+Sunderland,Jenson Seelt,DF,0.09,0.25,3.0,2.8,2800.0,True
+Sunderland,Leo Fuhr Hjelde,DF,0.09,0.25,3.0,2.8,2800.0,True
+Sunderland,Aji Alese,DF,0.09,0.25,3.0,2.8,2800.0,True
+Sunderland,Granit Xhaka,MF,0.21,0.6,6.0,5.2,2600.0,True
+Sunderland,Alan Browne,MF,0.21,0.6,6.0,5.2,2600.0,True
+Sunderland,Enzo Le Fée,MF,0.21,0.6,6.0,5.2,2600.0,True
+Sunderland,Habib Diarra,MF,0.21,0.6,6.0,5.2,2600.0,True
+Manchester United,Jack Fletcher,MF,0.21,0.6,6.0,5.2,2600.0,True
+Manchester United,Toby Collyer,MF,0.21,0.6,6.0,5.2,2600.0,True
+Manchester United,Daniel Gore,MF,0.21,0.6,6.0,5.2,2600.0,True
+Liverpool,Rio Ngumoha,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Manchester City,Géronimo Rulli,GK,0.305,0.835,8.0,7.8,2600.0,True
+Manchester City,Gianluigi Donnarumma,GK,0.305,0.835,8.0,7.8,2600.0,True
+Manchester City,Marcus Bettinelli,GK,0.305,0.835,8.0,7.8,2600.0,True
+Manchester City,James Trafford,GK,0.305,0.835,8.0,7.8,2600.0,True
+Manchester City,Rayan Aït Nouri,DF,0.09,0.25,3.0,2.8,2800.0,True
+Manchester City,Rúben Dias,DF,0.09,0.25,3.0,2.8,2800.0,True
+Manchester City,Matheus Nunes,DF,0.09,0.25,3.0,2.8,2800.0,True
+Manchester City,Marc Guéhi,DF,0.09,0.25,3.0,2.8,2800.0,True
+Manchester City,Joško Gvardiol,DF,0.09,0.25,3.0,2.8,2800.0,True
+Manchester City,Issa Kaboré,DF,0.09,0.25,3.0,2.8,2800.0,True
+Manchester City,Josh Wilson-Esbrand,DF,0.09,0.25,3.0,2.8,2800.0,True
+Manchester City,Rico Lewis,DF,0.09,0.25,3.0,2.8,2800.0,True
+Manchester City,Nico O'Reilly,DF,0.09,0.25,3.0,2.8,2800.0,True
+Manchester City,Abdukodir Khusanov,DF,0.09,0.25,3.0,2.8,2800.0,True
+Manchester City,Max Alleyne,DF,0.09,0.25,3.0,2.8,2800.0,True
+Manchester City,Vitor Reis,DF,0.09,0.25,3.0,2.8,2800.0,True
+Liverpool,Víctor Muñoz,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Manchester City,Juma Bah,DF,0.09,0.25,3.0,2.8,2800.0,True
+Liverpool,Hugo Ekitike,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Liverpool,Alexander Isak,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Liverpool,Ronald Araújo,DF,0.09,0.25,3.0,2.8,2800.0,True
+Liverpool,Calvin Ramsay,DF,0.09,0.25,3.0,2.8,2800.0,True
+Liverpool,Jeremie Frimpong,DF,0.09,0.25,3.0,2.8,2800.0,True
+Liverpool,Milos Kerkez,DF,0.09,0.25,3.0,2.8,2800.0,True
+Liverpool,Conor Bradley,DF,0.09,0.25,3.0,2.8,2800.0,True
+Liverpool,Giovanni Leoni,DF,0.09,0.25,3.0,2.8,2800.0,True
+Liverpool,Jeremy Jacquet,DF,0.09,0.25,3.0,2.8,2800.0,True
+Liverpool,Wataru Endō,MF,0.21,0.6,6.0,5.2,2600.0,True
+Liverpool,Curtis Jones,MF,0.21,0.6,6.0,5.2,2600.0,True
+Liverpool,Dominik Szoboszlai,MF,0.21,0.6,6.0,5.2,2600.0,True
+Liverpool,Florian Wirtz,MF,0.21,0.6,6.0,5.2,2600.0,True
+Liverpool,Ryan Gravenberch,MF,0.21,0.6,6.0,5.2,2600.0,True
+Liverpool,Harvey Elliott,MF,0.21,0.6,6.0,5.2,2600.0,True
+Liverpool,Stefan Bajcetic,MF,0.21,0.6,6.0,5.2,2600.0,True
+Liverpool,Trey Nyoni,MF,0.21,0.6,6.0,5.2,2600.0,True
+Liverpool,Federico Chiesa,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Tottenham Hotspur,Djed Spence,DF,0.09,0.25,3.0,2.8,2800.0,True
+Manchester City,Mateo Kovačić,MF,0.21,0.6,6.0,5.2,2600.0,True
+Manchester City,Kalvin Phillips,MF,0.21,0.6,6.0,5.2,2600.0,True
+Manchester United,Matthijs de Ligt,DF,0.09,0.25,3.0,2.8,2800.0,True
+Manchester United,Noussair Mazraoui,DF,0.09,0.25,3.0,2.8,2800.0,True
+Manchester United,Luke Shaw,DF,0.09,0.25,3.0,2.8,2800.0,True
+Manchester United,Diogo Dalot,DF,0.09,0.25,3.0,2.8,2800.0,True
+Manchester United,Lisandro Martínez,DF,0.09,0.25,3.0,2.8,2800.0,True
+Manchester United,Leny Yoro,DF,0.09,0.25,3.0,2.8,2800.0,True
+Manchester United,Tyler Fredricson,DF,0.09,0.25,3.0,2.8,2800.0,True
+Manchester United,Harry Amass,DF,0.09,0.25,3.0,2.8,2800.0,True
+Manchester United,Patrick Dorgu,DF,0.09,0.25,3.0,2.8,2800.0,True
+Manchester United,Ayden Heaven,DF,0.09,0.25,3.0,2.8,2800.0,True
+Manchester United,Diego León,DF,0.09,0.25,3.0,2.8,2800.0,True
+Manchester United,Youri Tielemans,MF,0.21,0.6,6.0,5.2,2600.0,True
+Manchester United,Mason Mount,MF,0.21,0.6,6.0,5.2,2600.0,True
+Manchester United,Manuel Ugarte,MF,0.21,0.6,6.0,5.2,2600.0,True
+Manchester United,Andrey Santos,MF,0.21,0.6,6.0,5.2,2600.0,True
+Manchester United,Kobbie Mainoo,MF,0.21,0.6,6.0,5.2,2600.0,True
+Manchester United,Dermot Mee,GK,0.305,0.835,8.0,7.8,2600.0,True
+Manchester United,Senne Lammens,GK,0.305,0.835,8.0,7.8,2600.0,True
+Manchester City,Tijjani Reijnders,MF,0.21,0.6,6.0,5.2,2600.0,True
+Manchester City,Elliot Anderson,MF,0.21,0.6,6.0,5.2,2600.0,True
+Manchester City,Rayan Cherki,MF,0.21,0.6,6.0,5.2,2600.0,True
+Manchester City,Nico Gonzalez,MF,0.21,0.6,6.0,5.2,2600.0,True
+Manchester City,Claudio Echeverri,MF,0.21,0.6,6.0,5.2,2600.0,True
+Manchester City,Jack Grealish,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Manchester City,Antoine Semenyo,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Manchester City,Omar Marmoush,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Manchester City,Jeremy Doku,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Manchester City,Sávio,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Manchester City,Jeremy Monga,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Manchester City,Ryan McAidoo,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True
+Manchester United,Karl Darlow,GK,0.305,0.835,8.0,7.8,2600.0,True
+Manchester United,Tom Heaton,GK,0.305,0.835,8.0,7.8,2600.0,True
+Manchester United,Altay Bayındır,GK,0.305,0.835,8.0,7.8,2600.0,True
+Manchester United,Radek Vitek,GK,0.305,0.835,8.0,7.8,2600.0,True
+Coventry City,Sidiki Cherif,FW,0.415,1.06,11.0,10.649999999999999,2560.0,True

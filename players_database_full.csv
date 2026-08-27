@@ -1,0 +1,664 @@
+team,player_name,position
+Arsenal FC,Kepa Arrizabalaga,Goalkeeper
+Arsenal FC,David Raya,Goalkeeper
+Arsenal FC,Illan Meslier,Goalkeeper
+Arsenal FC,Tommy Setford,Goalkeeper
+Arsenal FC,Ben White,Defence
+Arsenal FC,Gabriel Magalhães,Defence
+Arsenal FC,William Saliba,Defence
+Arsenal FC,Jurrien Timber,Defence
+Arsenal FC,Piero Hincapié,Defence
+Arsenal FC,Riccardo Calafiori,Defence
+Arsenal FC,Cristhian Mosquera,Defence
+Arsenal FC,Myles Lewis-Skelly,Defence
+Arsenal FC,Bruno Guimarães,Midfield
+Arsenal FC,Eberechi Eze,Midfield
+Arsenal FC,Martin Ødegaard,Midfield
+Arsenal FC,Mikel Merino,Midfield
+Arsenal FC,Declan Rice,Midfield
+Arsenal FC,Christian Nørgaard,Midfield
+Arsenal FC,Fabio Vieira,Midfield
+Arsenal FC,Martín Zubimendi,Midfield
+Arsenal FC,Ethan Nwaneri,Midfield
+Arsenal FC,Kai Havertz,Offence
+Arsenal FC,Gabriel Jesus,Offence
+Arsenal FC,Reiss Nelson,Offence
+Arsenal FC,Viktor Gyökeres,Offence
+Arsenal FC,Martinelli,Offence
+Arsenal FC,Bukayo Saka,Offence
+Arsenal FC,Christos Tzolis,Offence
+Arsenal FC,Noni Madueke,Offence
+Arsenal FC,Max Dowman,Offence
+Aston Villa FC,Emiliano Martínez,Goalkeeper
+Aston Villa FC,Marco Bizot,Goalkeeper
+Aston Villa FC,Joe Gauci,Goalkeeper
+Aston Villa FC,Zion Suzuki,Goalkeeper
+Aston Villa FC,Oliwier Zych,Goalkeeper
+Aston Villa FC,Lucas Digne,Defence
+Aston Villa FC,Victor Nilsson-Lindelöf,Defence
+Aston Villa FC,Ezri Konsa,Defence
+Aston Villa FC,Tyrone Mings,Defence
+Aston Villa FC,Matty Cash,Defence
+Aston Villa FC,Pau Torres,Defence
+Aston Villa FC,Ian Maatsen,Defence
+Aston Villa FC,Matteo Ruggeri,Defence
+Aston Villa FC,Andrés Garcia,Defence
+Aston Villa FC,Kosta Nedeljković,Defence
+Aston Villa FC,Modou Keba Cisse,Defence
+Aston Villa FC,Ross Barkley,Midfield
+Aston Villa FC,Boubacar Kamara,Midfield
+Aston Villa FC,John McGinn,Midfield
+Aston Villa FC,Morgan Rogers,Midfield
+Aston Villa FC,Amadou Onana,Midfield
+Aston Villa FC,João Gomes,Midfield
+Aston Villa FC,Lamare Bogarde,Midfield
+Aston Villa FC,Johan Manzambi,Midfield
+Aston Villa FC,George Hemmings,Midfield
+Aston Villa FC,Leon Bailey,Offence
+Aston Villa FC,Ollie Watkins,Offence
+Aston Villa FC,Tammy Abraham,Offence
+Aston Villa FC,Emiliano Buendía,Offence
+Aston Villa FC,Evann Guessand,Offence
+Aston Villa FC,Lewis Dobbin,Offence
+Aston Villa FC,Alejandro Garnacho,Offence
+Aston Villa FC,Alysson,Offence
+Aston Villa FC,Brian Madjo,Offence
+Chelsea FC,Robert Sánchez,Goalkeeper
+Chelsea FC,Gabriel Slonina,Goalkeeper
+Chelsea FC,Filip Jörgensen,Goalkeeper
+Chelsea FC,Teddy Sharman-Lowe,Goalkeeper
+Chelsea FC,Mike Penders,Goalkeeper
+Chelsea FC,Axel Disasi,Defence
+Chelsea FC,Trevoh Chalobah,Defence
+Chelsea FC,Tosin Adarabioyo,Defence
+Chelsea FC,Wesley Fofana,Defence
+Chelsea FC,Reece James,Defence
+Chelsea FC,Maxence Lacroix,Defence
+Chelsea FC,Pep Chavarría,Defence
+Chelsea FC,Malo Gusto,Defence
+Chelsea FC,Benoît Badiashile,Defence
+Chelsea FC,Levi Colwill,Defence
+Chelsea FC,Caleb Wiley,Defence
+Chelsea FC,Jorrel Hato,Defence
+Chelsea FC,Mamadou Sarr,Defence
+Chelsea FC,Marco Palestra,Defence
+Chelsea FC,Aaron Anselmino,Defence
+Chelsea FC,Josh Acheampong,Defence
+Chelsea FC,Denner,Defence
+Chelsea FC,Jordan Henderson,Midfield
+Chelsea FC,Morgan Rogers,Midfield
+Chelsea FC,Enzo Fernández,Midfield
+Chelsea FC,Moisés Caicedo,Midfield
+Chelsea FC,Cole Palmer,Midfield
+Chelsea FC,Dario Essugo,Midfield
+Chelsea FC,Valentin Barco,Midfield
+Chelsea FC,Romeo Lavia,Midfield
+Chelsea FC,Pedro Neto,Offence
+Chelsea FC,Danny Welbeck,Offence
+Chelsea FC,Mykhailo Mudryk,Offence
+Chelsea FC,João Pedro,Offence
+Chelsea FC,Emanuel Emegha,Offence
+Chelsea FC,Liam Delap,Offence
+Chelsea FC,Nicolas Jackson,Offence
+Chelsea FC,Jamie Bynoe-Gittens,Offence
+Chelsea FC,Alejandro Garnacho,Offence
+Chelsea FC,Marc Guiu,Offence
+Chelsea FC,Geovany Quenda,Offence
+Chelsea FC,Estevao,Offence
+Everton FC,Jordan Pickford,Goalkeeper
+Everton FC,Thomas King,Goalkeeper
+Everton FC,Mark Travers,Goalkeeper
+Everton FC,James Tarkowski,Defence
+Everton FC,Michael Keane,Defence
+Everton FC,Vitalii Mykolenko,Defence
+Everton FC,Jarrad Branthwaite,Defence
+Everton FC,Jake O'Brien,Defence
+Everton FC,Nathan Patterson,Defence
+Everton FC,Adam Aznou,Defence
+Everton FC,Christian Nørgaard,Midfield
+Everton FC,James Garner,Midfield
+Everton FC,Hayden Hackney,Midfield
+Everton FC,Kiernan Dewsbury Hall,Midfield
+Everton FC,Carlos Alcaraz,Midfield
+Everton FC,Merlin Röhl,Midfield
+Everton FC,Tim Iroegbunam,Midfield
+Everton FC,Harrison Armstrong,Midfield
+Everton FC,Dwight McNeil,Offence
+Everton FC,Iliman Ndiaye,Offence
+Everton FC,Brennan Johnson,Offence
+Everton FC,Beto,Offence
+Everton FC,Thierno Barry,Offence
+Everton FC,Tyler Dibling,Offence
+Everton FC,Tyrique George,Offence
+Everton FC,Harvey Foster,
+Fulham FC,Bernd Leno,Goalkeeper
+Fulham FC,Benjamin Lecomte,Goalkeeper
+Fulham FC,Timothy Castagne,Defence
+Fulham FC,Joachim Andersen,Defence
+Fulham FC,Antonee Robinson,Defence
+Fulham FC,Ryan Sessegnon,Defence
+Fulham FC,Issa Diop,Defence
+Fulham FC,Kenny Tete,Defence
+Fulham FC,Jorge Cuenca,Defence
+Fulham FC,Calvin Bassey,Defence
+Fulham FC,Luc De Fougerolles,Defence
+Fulham FC,Tom Cairney,Midfield
+Fulham FC,Harrison Reed,Midfield
+Fulham FC,Sander Berge,Midfield
+Fulham FC,Saša Lukić,Midfield
+Fulham FC,Emile Smith Rowe,Midfield
+Fulham FC,Luke Harris,Midfield
+Fulham FC,Shea Charles,Midfield
+Fulham FC,Joshua King,Midfield
+Fulham FC,César Palacios,Midfield
+Fulham FC,Alex Iwobi,Offence
+Fulham FC,Rodrigo Muniz,Offence
+Fulham FC,Kevin Santos,Offence
+Fulham FC,Oscar Bobb,Offence
+Fulham FC,Jonah Kusi-Asare,Offence
+Fulham FC,Gonzalo García,Offence
+Liverpool FC,Alisson Becker,Goalkeeper
+Liverpool FC,Freddie Woodman,Goalkeeper
+Liverpool FC,Giorgi Mamardashvili,Goalkeeper
+Liverpool FC,Vítězslav Jaroš,Goalkeeper
+Liverpool FC,Harvey Davies,Goalkeeper
+Liverpool FC,Kostas Tsimikas,Defence
+Liverpool FC,Joe Gomez,Defence
+Liverpool FC,Virgil van Dijk,Defence
+Liverpool FC,Ronald Araújo,Defence
+Liverpool FC,Calvin Ramsay,Defence
+Liverpool FC,Jeremie Frimpong,Defence
+Liverpool FC,Milos Kerkez,Defence
+Liverpool FC,Conor Bradley,Defence
+Liverpool FC,Giovanni Leoni,Defence
+Liverpool FC,Jeremy Jacquet,Defence
+Liverpool FC,Wataru Endō,Midfield
+Liverpool FC,Curtis Jones,Midfield
+Liverpool FC,Dominik Szoboszlai,Midfield
+Liverpool FC,Florian Wirtz,Midfield
+Liverpool FC,Alexis Mac Allister,Midfield
+Liverpool FC,Ryan Gravenberch,Midfield
+Liverpool FC,Harvey Elliott,Midfield
+Liverpool FC,Stefan Bajcetic,Midfield
+Liverpool FC,Trey Nyoni,Midfield
+Liverpool FC,Federico Chiesa,Offence
+Liverpool FC,Alexander Isak,Offence
+Liverpool FC,Cody Gakpo,Offence
+Liverpool FC,Hugo Ekitike,Offence
+Liverpool FC,Víctor Muñoz,Offence
+Liverpool FC,Rio Ngumoha,Offence
+Manchester City FC,Géronimo Rulli,Goalkeeper
+Manchester City FC,Gianluigi Donnarumma,Goalkeeper
+Manchester City FC,Marcus Bettinelli,Goalkeeper
+Manchester City FC,James Trafford,Goalkeeper
+Manchester City FC,Rayan Aït Nouri,Defence
+Manchester City FC,Rúben Dias,Defence
+Manchester City FC,Matheus Nunes,Defence
+Manchester City FC,Marc Guéhi,Defence
+Manchester City FC,Joško Gvardiol,Defence
+Manchester City FC,Issa Kaboré,Defence
+Manchester City FC,Josh Wilson-Esbrand,Defence
+Manchester City FC,Rico Lewis,Defence
+Manchester City FC,Nico O'Reilly,Defence
+Manchester City FC,Abdukodir Khusanov,Defence
+Manchester City FC,Max Alleyne,Defence
+Manchester City FC,Vitor Reis,Defence
+Manchester City FC,Juma Bah,Defence
+Manchester City FC,Mateo Kovačić,Midfield
+Manchester City FC,Rodri,Midfield
+Manchester City FC,Kalvin Phillips,Midfield
+Manchester City FC,Tijjani Reijnders,Midfield
+Manchester City FC,Phil Foden,Midfield
+Manchester City FC,Elliot Anderson,Midfield
+Manchester City FC,Rayan Cherki,Midfield
+Manchester City FC,Nico Gonzalez,Midfield
+Manchester City FC,Claudio Echeverri,Midfield
+Manchester City FC,Jack Grealish,Offence
+Manchester City FC,Antoine Semenyo,Offence
+Manchester City FC,Erling Haaland,Offence
+Manchester City FC,Omar Marmoush,Offence
+Manchester City FC,Jeremy Doku,Offence
+Manchester City FC,Sávio,Offence
+Manchester City FC,Jeremy Monga,Offence
+Manchester City FC,Ryan McAidoo,Offence
+Manchester United FC,Karl Darlow,Goalkeeper
+Manchester United FC,Tom Heaton,Goalkeeper
+Manchester United FC,Altay Bayındır,Goalkeeper
+Manchester United FC,Senne Lammens,Goalkeeper
+Manchester United FC,Radek Vitek,Goalkeeper
+Manchester United FC,Dermot Mee,Goalkeeper
+Manchester United FC,Harry Maguire,Defence
+Manchester United FC,Matthijs de Ligt,Defence
+Manchester United FC,Noussair Mazraoui,Defence
+Manchester United FC,Luke Shaw,Defence
+Manchester United FC,Diogo Dalot,Defence
+Manchester United FC,Lisandro Martínez,Defence
+Manchester United FC,Leny Yoro,Defence
+Manchester United FC,Tyler Fredricson,Defence
+Manchester United FC,Harry Amass,Defence
+Manchester United FC,Patrick Dorgu,Defence
+Manchester United FC,Ayden Heaven,Defence
+Manchester United FC,Diego León,Defence
+Manchester United FC,Bruno Fernandes,Midfield
+Manchester United FC,Youri Tielemans,Midfield
+Manchester United FC,Mason Mount,Midfield
+Manchester United FC,Manuel Ugarte,Midfield
+Manchester United FC,Andrey Santos,Midfield
+Manchester United FC,Kobbie Mainoo,Midfield
+Manchester United FC,Daniel Gore,Midfield
+Manchester United FC,Toby Collyer,Midfield
+Manchester United FC,Jack Fletcher,Midfield
+Manchester United FC,Tyler Fletcher,Midfield
+Manchester United FC,Jacob Devaney,Midfield
+Manchester United FC,Marcus Rashford,Offence
+Manchester United FC,Bryan Mbeumo,Offence
+Manchester United FC,Matheus Cunha,Offence
+Manchester United FC,Joshua Zirkzee,Offence
+Manchester United FC,Benjamin Šeško,Offence
+Manchester United FC,Amad Diallo,Offence
+Manchester United FC,Ethan Wheatley,Offence
+Manchester United FC,Chido Obi-Martin,Offence
+Manchester United FC,Shea Lacey,Offence
+Newcastle United FC,Nick Pope,Goalkeeper
+Newcastle United FC,Mark Gillespie,Goalkeeper
+Newcastle United FC,Lukáš Horníček,Goalkeeper
+Newcastle United FC,Ewen Jaouen,Goalkeeper
+Newcastle United FC,Aidan Harris,Goalkeeper
+Newcastle United FC,Fabian Schär,Defence
+Newcastle United FC,Dan Burn,Defence
+Newcastle United FC,Sven Botman,Defence
+Newcastle United FC,Amar Dedić,Defence
+Newcastle United FC,Malick Thiaw,Defence
+Newcastle United FC,Valentino Livramento,Defence
+Newcastle United FC,Lewis Hall,Defence
+Newcastle United FC,Alex Murphy,Defence
+Newcastle United FC,Leo Shahar,Defence
+Newcastle United FC,Bruno Guimarães,Midfield
+Newcastle United FC,Joe Willock,Midfield
+Newcastle United FC,Joelinton,Midfield
+Newcastle United FC,Jacob Ramsey,Midfield
+Newcastle United FC,Joe White,Midfield
+Newcastle United FC,Lewis Miley,Midfield
+Newcastle United FC,Sean Steur,Midfield
+Newcastle United FC,Aladji Bamba,Midfield
+Newcastle United FC,Yoane Wissa,Offence
+Newcastle United FC,Jacob Murphy,Offence
+Newcastle United FC,Harvey Barnes,Offence
+Newcastle United FC,Nick Woltemade,Offence
+Newcastle United FC,Anthony Elanga,Offence
+Newcastle United FC,William Osula,Offence
+Newcastle United FC,Bazoumana Touré,Offence
+Sunderland AFC,Simon Moore,Goalkeeper
+Sunderland AFC,Anthony Patterson,Goalkeeper
+Sunderland AFC,Robin Roefs,Goalkeeper
+Sunderland AFC,Melker Ellborg,Goalkeeper
+Sunderland AFC,Thomas Meunier,Defence
+Sunderland AFC,Luke O'Nien,Defence
+Sunderland AFC,Arthur Masuaku,Defence
+Sunderland AFC,Nordi Mukiele,Defence
+Sunderland AFC,Reinildo,Defence
+Sunderland AFC,Omar Alderete,Defence
+Sunderland AFC,Trai Hume,Defence
+Sunderland AFC,Daniel Ballard,Defence
+Sunderland AFC,Timothee Pembele,Defence
+Sunderland AFC,Jenson Seelt,Defence
+Sunderland AFC,Leo Fuhr Hjelde,Defence
+Sunderland AFC,Aji Alese,Defence
+Sunderland AFC,Granit Xhaka,Midfield
+Sunderland AFC,Alan Browne,Midfield
+Sunderland AFC,Enzo Le Fée,Midfield
+Sunderland AFC,Abdoullah Ba,Midfield
+Sunderland AFC,Habib Diarra,Midfield
+Sunderland AFC,Noah Sadiki,Midfield
+Sunderland AFC,Chris Rigg,Midfield
+Sunderland AFC,Wilson Isidor,Offence
+Sunderland AFC,Brian Brobbey,Offence
+Sunderland AFC,Simon Adingra,Offence
+Sunderland AFC,Romaine Mundle,Offence
+Sunderland AFC,Nilson Angulo,Offence
+Sunderland AFC,Ahmed Abdullahi,Offence
+Sunderland AFC,Chemsdine Talbi,Offence
+Sunderland AFC,Luís Semedo,Offence
+Sunderland AFC,Jocelin Bi,Offence
+Tottenham Hotspur FC,Guglielmo Vicario,Goalkeeper
+Tottenham Hotspur FC,Martin Dúbravka,Goalkeeper
+Tottenham Hotspur FC,Brandon Austin,Goalkeeper
+Tottenham Hotspur FC,Antonín Kinský,Goalkeeper
+Tottenham Hotspur FC,Kevin Danso,Defence
+Tottenham Hotspur FC,Andrew Robertson,Defence
+Tottenham Hotspur FC,Ben Davies,Defence
+Tottenham Hotspur FC,Christian Romero,Defence
+Tottenham Hotspur FC,Marcos Senesi,Defence
+Tottenham Hotspur FC,Djed Spence,Defence
+Tottenham Hotspur FC,Pedro Porro,Defence
+Tottenham Hotspur FC,Jan Paul van Hecke,Defence
+Tottenham Hotspur FC,Mickey van de Ven,Defence
+Tottenham Hotspur FC,Destiny Udogie,Defence
+Tottenham Hotspur FC,Ashley Phillips,Defence
+Tottenham Hotspur FC,Kota Takai,Defence
+Tottenham Hotspur FC,Souza,Defence
+Tottenham Hotspur FC,Dejan Kulusevski,Midfield
+Tottenham Hotspur FC,Rodrigo Bentancur,Midfield
+Tottenham Hotspur FC,Sandro Tonali,Midfield
+Tottenham Hotspur FC,James Maddison,Midfield
+Tottenham Hotspur FC,Conor Gallagher,Midfield
+Tottenham Hotspur FC,Xavi Simons,Midfield
+Tottenham Hotspur FC,Pape Sarr,Midfield
+Tottenham Hotspur FC,Archie Gray,Midfield
+Tottenham Hotspur FC,Mateus Fernandes,Midfield
+Tottenham Hotspur FC,Lucas Bergvall,Midfield
+Tottenham Hotspur FC,Dominic Solanke,Offence
+Tottenham Hotspur FC,Richarlison,Offence
+Tottenham Hotspur FC,Manor Solomon,Offence
+Tottenham Hotspur FC,Mohammed Kudus,Offence
+Tottenham Hotspur FC,Dane Scarlett,Offence
+Tottenham Hotspur FC,Mathys Tel,Offence
+Tottenham Hotspur FC,Wilson Odobert,Offence
+Tottenham Hotspur FC,Mikey Moore,Offence
+Tottenham Hotspur FC,Min-hyuk Yang,Offence
+Tottenham Hotspur FC,William Lankshear,Offence
+Hull City AFC,Jack Butland,Goalkeeper
+Hull City AFC,Dillon Phillips,Goalkeeper
+Hull City AFC,Harvey Cartwright,Goalkeeper
+Hull City AFC,Konstantinos Tzolakis,Goalkeeper
+Hull City AFC,Thimothee Lo-Tutala,Goalkeeper
+Hull City AFC,Matt Targett,Defence
+Hull City AFC,Paddy McNair,Defence
+Hull City AFC,John Egan,Defence
+Hull City AFC,Lewie Coyle,Defence
+Hull City AFC,Semi Ajayi,Defence
+Hull City AFC,Ryan John Giles,Defence
+Hull City AFC,Cody Drameh,Defence
+Hull City AFC,Matty Jacob,Defence
+Hull City AFC,Charlie Hughes,Defence
+Hull City AFC,Nobel Mendy,Defence
+Hull City AFC,Lucas Herrington,Defence
+Hull City AFC,Regan Slater,Midfield
+Hull City AFC,Matty Crooks,Midfield
+Hull City AFC,Kieran Dowell,Midfield
+Hull City AFC,Abdülkadir Ömür,Midfield
+Hull City AFC,Hidemasa Morita,Midfield
+Hull City AFC,Eliot Matazo,Midfield
+Hull City AFC,Lucas Gourna-Douath,Midfield
+Hull City AFC,Darko Gyabi,Midfield
+Hull City AFC,Elliot Stroud,Midfield
+Hull City AFC,Jens Hjertö-Dahl,Midfield
+Hull City AFC,Óscar Zambrano,Midfield
+Hull City AFC,Oliver McBurnie,Offence
+Hull City AFC,Joe Gelhardt,Offence
+Hull City AFC,Liam Millar,Offence
+Hull City AFC,Enis Destan,Offence
+Hull City AFC,David Akintola,Offence
+Hull City AFC,Mason Burstow,Offence
+Hull City AFC,Abu Kamara,Offence
+Hull City AFC,Mohamed Belloumi,Offence
+Leeds United FC,Lucas Perri,Goalkeeper
+Leeds United FC,Alex Cairns,Goalkeeper
+Leeds United FC,James Trafford,Goalkeeper
+Leeds United FC,Nico Elvedi,Defence
+Leeds United FC,Jayden Bogle,Defence
+Leeds United FC,James Justin,Defence
+Leeds United FC,Joe Rodon,Defence
+Leeds United FC,Maximilian Wöber,Defence
+Leeds United FC,Sam Byram,Defence
+Leeds United FC,Sebastiaan Bornauw,Defence
+Leeds United FC,Gabriel Gudmundsson,Defence
+Leeds United FC,Jaka Bijol,Defence
+Leeds United FC,Isaac Schmidt,Defence
+Leeds United FC,Tarik Muharemović,Defence
+Leeds United FC,Sean Longstaff,Midfield
+Leeds United FC,Ethan Ampadu,Midfield
+Leeds United FC,Ao Tanaka,Midfield
+Leeds United FC,Anton Stach,Midfield
+Leeds United FC,Ilia Gruev,Midfield
+Leeds United FC,Brenden Aaronson,Midfield
+Leeds United FC,Charlie Crewe,Midfield
+Leeds United FC,Jack Harrison,Offence
+Leeds United FC,Dominic Calvert-Lewin,Offence
+Leeds United FC,Lukas Nmecha,Offence
+Leeds United FC,Daniel James,Offence
+Leeds United FC,Harry Wilson,Offence
+Leeds United FC,Noah Okafor,Offence
+Leeds United FC,Joël Piroe,Offence
+Leeds United FC,Joe Gelhardt,Offence
+Leeds United FC,Largie Ramazani,Offence
+Leeds United FC,Wilfried Gnonto,Offence
+Leeds United FC,Mateo Fernandez,Offence
+Ipswich Town FC,David Button,Goalkeeper
+Ipswich Town FC,Christian Walton,Goalkeeper
+Ipswich Town FC,Alex Palmer,Goalkeeper
+Ipswich Town FC,Kjell Scherpen,Goalkeeper
+Ipswich Town FC,Kayne van Oevelen,Goalkeeper
+Ipswich Town FC,Darnell Furlong,Defence
+Ipswich Town FC,Ben Johnson,Defence
+Ipswich Town FC,Issa Diop,Defence
+Ipswich Town FC,Dara O'Shea,Defence
+Ipswich Town FC,Cédric Kipré,Defence
+Ipswich Town FC,Leif Davis,Defence
+Ipswich Town FC,Jacob Greaves,Defence
+Ipswich Town FC,Elkan Baggott,Defence
+Ipswich Town FC,Harry Clarke,Defence
+Ipswich Town FC,Abdoul Ouattara,Defence
+Ipswich Town FC,Wes Burns,Midfield
+Ipswich Town FC,Samuel Szmodics,Midfield
+Ipswich Town FC,Jack Taylor,Midfield
+Ipswich Town FC,Azor Matusiwa,Midfield
+Ipswich Town FC,Saša Lukić,Midfield
+Ipswich Town FC,Florentino,Midfield
+Ipswich Town FC,Marcelino Núñez,Midfield
+Ipswich Town FC,Anis Mehmeti,Midfield
+Ipswich Town FC,Julio Enciso,Midfield
+Ipswich Town FC,Cameron Humphreys,Midfield
+Ipswich Town FC,Kasey McAteer,Midfield
+Ipswich Town FC,Jack Clarke,Offence
+Ipswich Town FC,Chiedozie Ogbene,Offence
+Ipswich Town FC,Chuba Akpom,Offence
+Ipswich Town FC,George Hirst,Offence
+Ipswich Town FC,Daizen Maeda,Offence
+Ipswich Town FC,Jaden Philogene-Bidace,Offence
+Ipswich Town FC,Emersonn,Offence
+Ipswich Town FC,Ali Al-Hamadi,Offence
+Ipswich Town FC,Abdul Issahaku,Offence
+Ipswich Town FC,Sindre Egeli,Offence
+Nottingham Forest FC,John,Goalkeeper
+Nottingham Forest FC,Matz Sels,Goalkeeper
+Nottingham Forest FC,Steven Benda,Goalkeeper
+Nottingham Forest FC,Nikola Milenković,Defence
+Nottingham Forest FC,Ola Aina,Defence
+Nottingham Forest FC,Omar Richards,Defence
+Nottingham Forest FC,Morato,Defence
+Nottingham Forest FC,Neco Williams,Defence
+Nottingham Forest FC,Luca Netz,Defence
+Nottingham Forest FC,Jair Paula,Defence
+Nottingham Forest FC,Ousmane Diomande,Defence
+Nottingham Forest FC,Nicolò Savona,Defence
+Nottingham Forest FC,Murillo,Defence
+Nottingham Forest FC,Zach Abbott,Defence
+Nottingham Forest FC,Tyler Bindon,Defence
+Nottingham Forest FC,Eric da Silva Moreira,Defence
+Nottingham Forest FC,Morgan Gibbs-White,Midfield
+Nottingham Forest FC,Ryan Yates,Midfield
+Nottingham Forest FC,Ibrahim Sangaré,Midfield
+Nottingham Forest FC,Xaver Schlager,Midfield
+Nottingham Forest FC,Nicolás Domínguez,Midfield
+Nottingham Forest FC,James McAtee,Midfield
+Nottingham Forest FC,Callum Hudson-Odoi,Offence
+Nottingham Forest FC,Chris Wood,Offence
+Nottingham Forest FC,Taiwo Awoniyi,Offence
+Nottingham Forest FC,Dan Ndoye,Offence
+Nottingham Forest FC,Arnaud Kalimuendo,Offence
+Nottingham Forest FC,Dilane Bakwa,Offence
+Nottingham Forest FC,Omari Hutchinson,Offence
+Nottingham Forest FC,Igor Jesus,Offence
+Crystal Palace FC,Dean Henderson,Goalkeeper
+Crystal Palace FC,Remi Matthews,Goalkeeper
+Crystal Palace FC,Walter Benítez,Goalkeeper
+Crystal Palace FC,Owen Goodman,Goalkeeper
+Crystal Palace FC,Nathaniel Clyne,Defence
+Crystal Palace FC,Takehiro Tomiyasu,Defence
+Crystal Palace FC,Borna Sosa,Defence
+Crystal Palace FC,Daniel Muñoz,Defence
+Crystal Palace FC,Maxence Lacroix,Defence
+Crystal Palace FC,Chris Richards,Defence
+Crystal Palace FC,Tyrick Mitchell,Defence
+Crystal Palace FC,Óscar Mingueza,Defence
+Crystal Palace FC,Chadi Riad,Defence
+Crystal Palace FC,Anan Khalaili,Defence
+Crystal Palace FC,Jaydee Canvot,Defence
+Crystal Palace FC,Caleb Kporha,Defence
+Crystal Palace FC,Rio Cardines,Defence
+Crystal Palace FC,Jefferson Lerma,Midfield
+Crystal Palace FC,Daichi Kamada,Midfield
+Crystal Palace FC,Will Hughes,Midfield
+Crystal Palace FC,Cheick Doucouré,Midfield
+Crystal Palace FC,Justin Devenny,Midfield
+Crystal Palace FC,David Ozoh,Midfield
+Crystal Palace FC,Adam Wharton,Midfield
+Crystal Palace FC,Jean-Philippe Mateta,Offence
+Crystal Palace FC,Ismaïla Sarr,Offence
+Crystal Palace FC,Eddie Nketiah,Offence
+Crystal Palace FC,Dwight McNeil,Offence
+Crystal Palace FC,Brennan Johnson,Offence
+Crystal Palace FC,Evann Guessand,Offence
+Crystal Palace FC,Yeremi Pino,Offence
+Crystal Palace FC,Matheus Franca,Offence
+Crystal Palace FC,Jesurun Rak-Sakyi,Offence
+Crystal Palace FC,Romain Esse,Offence
+Crystal Palace FC,Jørgen Strand Larsen,Offence
+Crystal Palace FC,Zavier Gozo,Offence
+Brighton & Hove Albion FC,Jason Steele,Goalkeeper
+Brighton & Hove Albion FC,Bart Verbruggen,Goalkeeper
+Brighton & Hove Albion FC,Thomas McGill,Goalkeeper
+Brighton & Hove Albion FC,Carl Rushworth,Goalkeeper
+Brighton & Hove Albion FC,James Beadle,Goalkeeper
+Brighton & Hove Albion FC,Olivier Boscagli,Defence
+Brighton & Hove Albion FC,Pascal Struijk,Defence
+Brighton & Hove Albion FC,Lewis Dunk,Defence
+Brighton & Hove Albion FC,Ferdi Kadıoğlu,Defence
+Brighton & Hove Albion FC,Igor Julio,Defence
+Brighton & Hove Albion FC,Michael Svoboda,Defence
+Brighton & Hove Albion FC,Mats Wieffer,Defence
+Brighton & Hove Albion FC,Maxim De Cuyper,Defence
+Brighton & Hove Albion FC,Eiran Cashin,Defence
+Brighton & Hove Albion FC,Diego Coppola,Defence
+Brighton & Hove Albion FC,Costinha,Defence
+Brighton & Hove Albion FC,Luka Vušković,Defence
+Brighton & Hove Albion FC,Matt O'Riley,Midfield
+Brighton & Hove Albion FC,Pascal Groß,Midfield
+Brighton & Hove Albion FC,Yasin Ayari,Midfield
+Brighton & Hove Albion FC,Carlos Baleba,Midfield
+Brighton & Hove Albion FC,Diego Gómez,Midfield
+Brighton & Hove Albion FC,Facundo Buonanotte,Midfield
+Brighton & Hove Albion FC,Jack Hinshelwood,Midfield
+Brighton & Hove Albion FC,Malick Yalcouyé,Midfield
+Brighton & Hove Albion FC,Danny Welbeck,Offence
+Brighton & Hove Albion FC,Georginio Rutter,Offence
+Brighton & Hove Albion FC,Evan Ferguson,Offence
+Brighton & Hove Albion FC,Kaoru Mitoma,Offence
+Brighton & Hove Albion FC,Yankubah Minteh,Offence
+Brighton & Hove Albion FC,Tom Watson,Offence
+Brighton & Hove Albion FC,Amario Cozier-Duberry,Offence
+Brighton & Hove Albion FC,Ibrahim Osman,Offence
+Brighton & Hove Albion FC,Stefanos Tzimas,Offence
+Brighton & Hove Albion FC,Promise Akinpelu,Offence
+Brighton & Hove Albion FC,Charalampos Kostoulas,Offence
+Brighton & Hove Albion FC,Zadok Yohanna,Offence
+Brighton & Hove Albion FC,Rodrigo Rêgo,Offence
+Brentford FC,Ellery Balcombe,Goalkeeper
+Brentford FC,Caoimhin Kelleher,Goalkeeper
+Brentford FC,Hákon Rafn Valdimarsson,Goalkeeper
+Brentford FC,Matthew Cox,Goalkeeper
+Brentford FC,Julian Eyestone,Goalkeeper
+Brentford FC,Ethan Pinnock,Defence
+Brentford FC,Rico Henry,Defence
+Brentford FC,Sepp van den Berg,Defence
+Brentford FC,Kristoffer Ajer,Defence
+Brentford FC,Aaron Hickey,Defence
+Brentford FC,Nathan Collins,Defence
+Brentford FC,Michael Kayode,Defence
+Brentford FC,Jayden Meghoma,Defence
+Brentford FC,Ji-soo Kim,Defence
+Brentford FC,Jannik Schuster,Defence
+Brentford FC,Benjamin Fredrick,Defence
+Brentford FC,Benjamin Arthur,Defence
+Brentford FC,Jordan Henderson,Midfield
+Brentford FC,Josh Dasilva,Midfield
+Brentford FC,Vitaly Janelt,Midfield
+Brentford FC,Mathias Jensen,Midfield
+Brentford FC,Mikkel Damsgaard,Midfield
+Brentford FC,Keane Lewis-Potter,Midfield
+Brentford FC,Mamadou Sangare,Midfield
+Brentford FC,Fabio Carvalho,Midfield
+Brentford FC,Antoni Milambo,Midfield
+Brentford FC,Yegor Yarmolyuk,Midfield
+Brentford FC,Yunus Konak,Midfield
+Brentford FC,Callum Wilson,Offence
+Brentford FC,Kevin Schade,Offence
+Brentford FC,Thiago,Offence
+Brentford FC,Jaidon Anthony,Offence
+Brentford FC,Dango Ouattara,Offence
+Brentford FC,Gustavo Gomes,Offence
+Brentford FC,Kaye Furo,Offence
+AFC Bournemouth,Fraser Forster,Goalkeeper
+AFC Bournemouth,Đorđe Petrović,Goalkeeper
+AFC Bournemouth,Will Dennis,Goalkeeper
+AFC Bournemouth,Adam Smith,Defence
+AFC Bournemouth,Max Aarons,Defence
+AFC Bournemouth,James Hill,Defence
+AFC Bournemouth,Bafodé Diakité,Defence
+AFC Bournemouth,Julian Araujo,Defence
+AFC Bournemouth,Adrien Truffert,Defence
+AFC Bournemouth,Juanlu,Defence
+AFC Bournemouth,Julio Soler,Defence
+AFC Bournemouth,Antonio Silva,Defence
+AFC Bournemouth,Matai Akinmboni,Defence
+AFC Bournemouth,Veljko Milosavljević,Defence
+AFC Bournemouth,Lewis Cook,Midfield
+AFC Bournemouth,Marcus Tavernier,Midfield
+AFC Bournemouth,Justin Kluivert,Midfield
+AFC Bournemouth,Ryan Christie,Midfield
+AFC Bournemouth,Tyler Adams,Midfield
+AFC Bournemouth,Alex Scott,Midfield
+AFC Bournemouth,Alex Toth,Midfield
+AFC Bournemouth,Ben Winterburn,Midfield
+AFC Bournemouth,David Brooks,Offence
+AFC Bournemouth,Enes Ünal,Offence
+AFC Bournemouth,Evanilson,Offence
+AFC Bournemouth,Amine Adli,Offence
+AFC Bournemouth,Daniel Jebbison,Offence
+AFC Bournemouth,Ben Doak,Offence
+AFC Bournemouth,Alvaro Rodriguez,Offence
+AFC Bournemouth,Rayan,Offence
+AFC Bournemouth,Eli Kroupi,Offence
+Coventry City FC,Ben Wilson,Goalkeeper
+Coventry City FC,Oliver Dovin,Goalkeeper
+Coventry City FC,Carl Rushworth,Goalkeeper
+Coventry City FC,Jake Bidwell,Defence
+Coventry City FC,Luke Woolfenden,Defence
+Coventry City FC,Jay Dasilva,Defence
+Coventry City FC,Liam Kitching,Defence
+Coventry City FC,Milan van Ewijk,Defence
+Coventry City FC,Joel Latibeaudiere,Defence
+Coventry City FC,Bobby Thomas,Defence
+Coventry City FC,Aurele Amenda,Defence
+Coventry City FC,Kaine Kesler,Defence
+Coventry City FC,Miguel Angel Brau,Defence
+Coventry City FC,Ephron Mason-Clark,Midfield
+Coventry City FC,Matt Grimes,Midfield
+Coventry City FC,Gustavo Hamer,Midfield
+Coventry City FC,Victor Torp,Midfield
+Coventry City FC,Frank Onyeka,Midfield
+Coventry City FC,Josh Eccles,Midfield
+Coventry City FC,Jack Rudoni,Midfield
+Coventry City FC,Kai Andrews,Midfield
+Coventry City FC,Caleb Yirenkyi,Midfield
+Coventry City FC,Brandon Thomas-Asante,Offence
+Coventry City FC,Taiwo Awoniyi,Offence
+Coventry City FC,Haji Wright,Offence
+Coventry City FC,Tatsuhiro Sakamoto,Offence
+Coventry City FC,Raphael Borges Rodrigues,Offence
+Coventry City FC,Ellis Simms,Offence
+Coventry City FC,Loum Tchaouna,Offence
+Coventry City FC,Norman Bassette,Offence
+Coventry City FC,Jahnoah Markelo,Offence
+Coventry City FC,Sidiki Cherif,Offence

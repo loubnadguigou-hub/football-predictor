@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 
 class PlayerGoalModel:
-    def __init__(self, csv_path: str = "data/players_database.csv"):
+    def __init__(self, csv_path: str = "data/players_database_merged.csv"):
         self.csv_path = csv_path
         self.df_database = pd.DataFrame()
         self._load_database()
@@ -16,7 +16,7 @@ class PlayerGoalModel:
         else:
             # Fallback check relative to project root directory
             base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-            target_path = os.path.join(base_dir, "data", "players_database.csv")
+            target_path = os.path.join(base_dir, "data", "players_database_merged.csv")
 
         if os.path.exists(target_path):
             try:
