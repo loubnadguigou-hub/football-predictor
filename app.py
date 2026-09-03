@@ -296,6 +296,43 @@ with tab2:
     df_home_players = player_engine.predict_player_probabilities(home_team)
     df_away_players = player_engine.predict_player_probabilities(away_team)
 
+    # --- Standout scorer predictions (additive, does not affect existing tables) ---
+    home_standout = player_engine.get_standout_players(df_home_players)
+    away_standout = player_engine.get_standout_players(df_away_players)
+
+    st.markdown("#### 🔥 Standout Predictions")
+    col_h_stand, col_a_stand = st.columns(2)
+
+    with col_h_stand:
+        if home_standout["most_likely"] is not None:
+            mp = home_standout["most_likely"]
+            st.success(
+                f"🎯 **Most likely to score for {home_team}:** "
+                f"{mp['Player Name']} ({mp['Position']}) — {mp['Goal Prob (%)']:.1f}% chance"
+            )
+        if home_standout["least_likely"] is not None:
+            lp = home_standout["least_likely"]
+            st.info(
+                f"🚫 **Least likely to score for {home_team}:** "
+                f"{lp['Player Name']} ({lp['Position']}) — only {lp['Goal Prob (%)']:.1f}% chance"
+            )
+
+    with col_a_stand:
+        if away_standout["most_likely"] is not None:
+            mp = away_standout["most_likely"]
+            st.success(
+                f"🎯 **Most likely to score for {away_team}:** "
+                f"{mp['Player Name']} ({mp['Position']}) — {mp['Goal Prob (%)']:.1f}% chance"
+            )
+        if away_standout["least_likely"] is not None:
+            lp = away_standout["least_likely"]
+            st.info(
+                f"🚫 **Least likely to score for {away_team}:** "
+                f"{lp['Player Name']} ({lp['Position']}) — only {lp['Goal Prob (%)']:.1f}% chance"
+            )
+
+    st.markdown("---")
+
     # Standardize column headers
     column_mapping = {
         "Player": "Player Name",
