@@ -107,52 +107,34 @@ with tab1:
         # Filter schedule by Matchweek
         mw_df = df_sched[df_sched["matchweek"] == selected_mw].copy().reset_index(drop=True)
 
-        # ── Clickable match list ──
+        # ── Fixture selector (dropdown, like Matchweek) ──
         if "selected_match" not in st.session_state:
             st.session_state.selected_match = None
 
-        st.markdown("#### 🖱️ Click a fixture to select it:")
+        if len(mw_df) > 0:
+            fixture_labels = [
+                f"{row['home_team']} vs {row['away_team']} — "
+                f"{str(row.get('day', ''))[:3]} {row.get('date', '')} · {row.get('kickoff_time_uk', '')} UK"
+                for _, row in mw_df.iterrows()
+            ]
 
-        for idx, row in mw_df.iterrows():
-            home = str(row.get("home_team", ""))
-            away = str(row.get("away_team", ""))
-            date_str = str(row.get("date", ""))
-            day_str = str(row.get("day", ""))[:3]
-            time_str = str(row.get("kickoff_time_uk", ""))
-
-            is_selected = (
-                st.session_state.selected_match is not None
-                and st.session_state.selected_match.get("matchweek") == selected_mw
-                and st.session_state.selected_match.get("home") == home
-                and st.session_state.selected_match.get("away") == away
+            selected_label = st.selectbox(
+                "🖱️ Click a fixture to select it:",
+                options=fixture_labels,
+                index=0,
+                key=f"fixture_select_{selected_mw}"
             )
 
-            with st.container(border=True):
-                col_info, col_btn = st.columns([4, 1])
-                with col_info:
-                    st.markdown(f"**{home} vs {away}**")
-                    st.caption(f"{day_str} {date_str} · {time_str} UK")
-                with col_btn:
-                    btn_label = "✅ Selected" if is_selected else "Select"
-                    if st.button(
-                        btn_label,
-                        key=f"btn_{selected_mw}_{idx}",
-                        type="primary" if is_selected else "secondary",
-                        use_container_width=True
-                    ):
-                        st.session_state.selected_match = {
-                            "matchweek": selected_mw, "home": home, "away": away
-                        }
-                        st.rerun()
+            selected_idx = fixture_labels.index(selected_label)
+            picked_row = mw_df.iloc[selected_idx]
 
-        # Default to first match in the list if nothing has been picked yet
-        if st.session_state.selected_match is None and len(mw_df) > 0:
-            first_row = mw_df.iloc[0]
             st.session_state.selected_match = {
                 "matchweek": selected_mw,
-                "home": str(first_row.get("home_team", "")),
-                "away": str(first_row.get("away_team", "")),
+                "home": str(picked_row.get("home_team", "")),
+                "away": str(picked_row.get("away_team", "")),
             }
+        else:
+            st.session_state.selected_match = None
 
         sel = st.session_state.selected_match
         home_team = sel["home"]
@@ -396,3 +378,4 @@ with tab2:
                 col_b.metric("Position", player_info.get("Position", "N/A"))
                 col_c.metric("Current Club", player_info.get("Current Club", "N/A"))
                 st.table(pd.DataFrame([player_info]))
+                
