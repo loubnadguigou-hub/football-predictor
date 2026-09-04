@@ -11,6 +11,8 @@ import plotly.express as px
 from src.data_loader import load_data, load_schedule, fetch_sportradar_player_profile
 from src.elo_dixon_coles import EloDixonColesModel
 from src.player_model import PlayerGoalModel
+from src.prediction_store import save_prediction, load_predictions
+from src.results_tracker import compute_accuracy
 
 # 1. Page Configuration
 st.set_page_config(
@@ -88,6 +90,18 @@ tab1, tab2 = st.tabs(["📊 Match Outcome Engine", "🎯 Player Goal Scoring Mod
 with tab1:
     st.markdown("### 🗓️ 2026/27 Full Season Schedule & Match Selector")
 
+    # ── Running prediction accuracy banner ──
+    predictions_df = load_predictions()
+    accuracy = compute_accuracy(predictions_df)
+    if accuracy["total"] > 0:
+        st.markdown(f"""
+        <div class="metric-box" style="margin-bottom: 15px; max-width: 280px;">
+            <div class="metric-title">🎯 PREDICTION ACCURACY</div>
+            <div class="metric-val">{accuracy['accuracy_pct']}%</div>
+            <div style="font-size:11px; color:#888;">{accuracy['correct']}/{accuracy['total']} correct so far</div>
+        </div>
+        """, unsafe_allow_html=True)
+
     if not df_schedule.empty:
         # Standardize column names
         df_sched = df_schedule.copy()
@@ -107,52 +121,34 @@ with tab1:
         # Filter schedule by Matchweek
         mw_df = df_sched[df_sched["matchweek"] == selected_mw].copy().reset_index(drop=True)
 
-        # ── Clickable match list ──
+        # ── Fixture selector (dropdown, like Matchweek) ──
         if "selected_match" not in st.session_state:
             st.session_state.selected_match = None
 
-        st.markdown("#### 🖱️ Click a fixture to select it:")
+        if len(mw_df) > 0:
+            fixture_labels = [
+                f"{row['home_team']} vs {row['away_team']} — "
+                f"{str(row.get('day', ''))[:3]} {row.get('date', '')} · {row.get('kickoff_time_uk', '')} UK"
+                for _, row in mw_df.iterrows()
+            ]
 
-        for idx, row in mw_df.iterrows():
-            home = str(row.get("home_team", ""))
-            away = str(row.get("away_team", ""))
-            date_str = str(row.get("date", ""))
-            day_str = str(row.get("day", ""))[:3]
-            time_str = str(row.get("kickoff_time_uk", ""))
-
-            is_selected = (
-                st.session_state.selected_match is not None
-                and st.session_state.selected_match.get("matchweek") == selected_mw
-                and st.session_state.selected_match.get("home") == home
-                and st.session_state.selected_match.get("away") == away
+            selected_label = st.selectbox(
+                "🖱️ Click a fixture to select it:",
+                options=fixture_labels,
+                index=0,
+                key=f"fixture_select_{selected_mw}"
             )
 
-            with st.container(border=True):
-                col_info, col_btn = st.columns([4, 1])
-                with col_info:
-                    st.markdown(f"**{home} vs {away}**")
-                    st.caption(f"{day_str} {date_str} · {time_str} UK")
-                with col_btn:
-                    btn_label = "✅ Selected" if is_selected else "Select"
-                    if st.button(
-                        btn_label,
-                        key=f"btn_{selected_mw}_{idx}",
-                        type="primary" if is_selected else "secondary",
-                        use_container_width=True
-                    ):
-                        st.session_state.selected_match = {
-                            "matchweek": selected_mw, "home": home, "away": away
-                        }
-                        st.rerun()
+            selected_idx = fixture_labels.index(selected_label)
+            picked_row = mw_df.iloc[selected_idx]
 
-        # Default to first match in the list if nothing has been picked yet
-        if st.session_state.selected_match is None and len(mw_df) > 0:
-            first_row = mw_df.iloc[0]
             st.session_state.selected_match = {
                 "matchweek": selected_mw,
-                "home": str(first_row.get("home_team", "")),
-                "away": str(first_row.get("away_team", "")),
+                "home": str(picked_row.get("home_team", "")),
+                "away": str(picked_row.get("away_team", "")),
             }
+        else:
+            st.session_state.selected_match = None
 
         sel = st.session_state.selected_match
         home_team = sel["home"]
@@ -185,6 +181,17 @@ with tab1:
     else:
         # Compute match forecasts
         res = dixon_coles_engine.predict(home_team, away_team)
+
+        # ── Save this prediction for accuracy tracking ──
+        if not df_schedule.empty:
+            save_prediction(
+                matchweek=sel["matchweek"],
+                home_team=home_team,
+                away_team=away_team,
+                home_win_p=res['home_win_p'],
+                draw_p=res['draw_p'],
+                away_win_p=res['away_win_p'],
+            )
 
         # Top Banner & Projected Scorelines
         col_banner, col_top_scores = st.columns([2, 1])
@@ -295,6 +302,43 @@ with tab2:
 
     df_home_players = player_engine.predict_player_probabilities(home_team)
     df_away_players = player_engine.predict_player_probabilities(away_team)
+
+    # --- Standout scorer predictions (additive, does not affect existing tables) ---
+    home_standout = player_engine.get_standout_players(df_home_players)
+    away_standout = player_engine.get_standout_players(df_away_players)
+
+    st.markdown("#### 🔥 Standout Predictions")
+    col_h_stand, col_a_stand = st.columns(2)
+
+    with col_h_stand:
+        if home_standout["most_likely"] is not None:
+            mp = home_standout["most_likely"]
+            st.success(
+                f"🎯 **Most likely to score for {home_team}:** "
+                f"{mp['Player Name']} ({mp['Position']}) — {mp['Goal Prob (%)']:.1f}% chance"
+            )
+        if home_standout["least_likely"] is not None:
+            lp = home_standout["least_likely"]
+            st.info(
+                f"🚫 **Least likely to score for {home_team}:** "
+                f"{lp['Player Name']} ({lp['Position']}) — only {lp['Goal Prob (%)']:.1f}% chance"
+            )
+
+    with col_a_stand:
+        if away_standout["most_likely"] is not None:
+            mp = away_standout["most_likely"]
+            st.success(
+                f"🎯 **Most likely to score for {away_team}:** "
+                f"{mp['Player Name']} ({mp['Position']}) — {mp['Goal Prob (%)']:.1f}% chance"
+            )
+        if away_standout["least_likely"] is not None:
+            lp = away_standout["least_likely"]
+            st.info(
+                f"🚫 **Least likely to score for {away_team}:** "
+                f"{lp['Player Name']} ({lp['Position']}) — only {lp['Goal Prob (%)']:.1f}% chance"
+            )
+
+    st.markdown("---")
 
     # Standardize column headers
     column_mapping = {
