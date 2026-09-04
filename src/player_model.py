@@ -2,6 +2,7 @@ import os
 import numpy as np
 import pandas as pd
 
+
 class PlayerGoalModel:
     def __init__(self, csv_path: str = "data/players_database_merged.csv"):
         self.csv_path = csv_path
@@ -17,7 +18,6 @@ class PlayerGoalModel:
             # Fallback check relative to project root directory
             base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
             target_path = os.path.join(base_dir, "data", "players_database_merged.csv")
-
         if os.path.exists(target_path):
             try:
                 self.df_database = pd.read_csv(target_path)
@@ -36,7 +36,6 @@ class PlayerGoalModel:
             df_team = self.df_database[team_mask].copy()
         else:
             df_team = pd.DataFrame()
-
         # Fallback if team name is missing or CSV is empty
         if df_team.empty:
             df_team = pd.DataFrame([
@@ -45,12 +44,10 @@ class PlayerGoalModel:
                 {"player": f"{team_name} Midfielder 1", "pos": "MF", "xg90": 0.18, "xsot90": 0.45},
                 {"player": f"{team_name} Defender 1", "pos": "DF", "xg90": 0.06, "xsot90": 0.15},
             ])
-
         # Calculate Poisson probabilities
         df_team["Goal_Prob"] = (1 - np.exp(-df_team["xg90"])) * 100
         df_team["No_Goal_Prob"] = (np.exp(-df_team["xg90"])) * 100
         df_team["Zero_Shots_Target_Prob"] = (np.exp(-df_team["xsot90"])) * 100
-
         # Rename columns for clear presentation
         return df_team.rename(columns={
             "player": "Player Name",
@@ -60,3 +57,18 @@ class PlayerGoalModel:
             "Goal_Prob": "Goal Prob (%)",
             "No_Goal_Prob": "No Goal Prob (%)"
         })
+
+    def get_standout_players(self, df: pd.DataFrame) -> dict:
+        """
+        Given a team's player probability DataFrame (from predict_player_probabilities),
+        returns the player most likely to score and the player least likely to score.
+        Does NOT modify the input DataFrame — read-only, additive helper.
+        """
+        if df.empty or "Goal Prob (%)" not in df.columns:
+            return {"most_likely": None, "least_likely": None}
+        most_likely_row = df.loc[df["Goal Prob (%)"].idxmax()]
+        least_likely_row = df.loc[df["Goal Prob (%)"].idxmin()]
+        return {
+            "most_likely": most_likely_row.to_dict(),
+            "least_likely": least_likely_row.to_dict()
+        }

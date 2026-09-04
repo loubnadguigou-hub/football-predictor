@@ -403,3 +403,4 @@ with tab2:
                 col_b.metric("Position", player_info.get("Position", "N/A"))
                 col_c.metric("Current Club", player_info.get("Current Club", "N/A"))
                 st.table(pd.DataFrame([player_info]))
+                
