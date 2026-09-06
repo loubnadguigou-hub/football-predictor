@@ -1,5 +1,6 @@
 import sys
 import os
+import pickle
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
@@ -62,7 +63,13 @@ st.markdown("""
 st.markdown("<div class='main-title'>⚽ Premier League Predictive Analytics Hub</div>", unsafe_allow_html=True)
 
 # Load Models & Schedule Data
-dixon_coles_engine = EloDixonColesModel()
+MODEL_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "trained_model.pkl")
+if os.path.exists(MODEL_PATH):
+    with open(MODEL_PATH, "rb") as f:
+        dixon_coles_engine = pickle.load(f)
+else:
+    dixon_coles_engine = EloDixonColesModel()
+    st.warning("⚠️ Trained model not found — using untrained defaults. Run scripts/train_model.py locally.")
 player_engine = PlayerGoalModel()
 teams = dixon_coles_engine.get_teams()
 df_schedule = load_schedule()
