@@ -16,8 +16,28 @@ class EloDixonColesModel:
             'hfa': 150.0,   # Home Advantage in Elo points
             'rho': -0.05    # Low-score draw adjustment
         }
+            # Maps full/official names (used in the 2026/27 schedule) to the
+    # short names used in the historical football-data.co.uk CSVs
+    # (the names the Elo ratings were actually trained on).
+    TEAM_NAME_ALIASES = {
+        "AFC Bournemouth": "Bournemouth",
+        "Brighton & Hove Albion": "Brighton",
+        "Coventry City": "Coventry",
+        "Hull City": "Hull",
+        "Ipswich Town": "Ipswich",
+        "Leeds United": "Leeds",
+        "Manchester City": "Man City",
+        "Manchester United": "Man United",
+        "Newcastle United": "Newcastle",
+        "Nottingham Forest": "Nott'm Forest",
+        "Tottenham Hotspur": "Tottenham",
+    }
+
+    def normalize_team_name(self, team: str) -> str:
+        return self.TEAM_NAME_ALIASES.get(team, team)
 
     def get_elo(self, team: str) -> float:
+        team = self.normalize_team_name(team)
         return self.elos.get(team, self.default_elo)
 
     def get_teams(self) -> list:
