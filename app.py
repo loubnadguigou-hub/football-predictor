@@ -65,12 +65,14 @@ st.markdown("""
         border: 1px solid #e2e8f0;
         background-color: white;
         text-align: center;
-        white-space: pre-line;
         line-height: 1.4;
     }
     div.stButton > button p {
         font-size: 13px;
         font-weight: 600;
+        white-space: pre-line !important;
+        overflow-wrap: break-word;
+        margin: 0;
     }
     div.stButton > button:hover {
         border-color: #00a86b;
