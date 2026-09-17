@@ -56,6 +56,26 @@ st.markdown("""
         font-weight: 800;
         color: #1a202c;
     }
+    div.stButton > button {
+        width: 100%;
+        height: auto;
+        min-height: 60px;
+        padding: 10px 8px;
+        border-radius: 10px;
+        border: 1px solid #e2e8f0;
+        background-color: white;
+        text-align: center;
+        white-space: pre-line;
+        line-height: 1.4;
+    }
+    div.stButton > button p {
+        font-size: 13px;
+        font-weight: 600;
+    }
+    div.stButton > button:hover {
+        border-color: #00a86b;
+        color: #00a86b;
+    }
     </style>
 """, unsafe_allow_html=True)
 
@@ -128,7 +148,7 @@ with tab1:
         # Filter schedule by Matchweek
         mw_df = df_sched[df_sched["matchweek"] == selected_mw].copy().reset_index(drop=True)
 
-        # ── Clickable match cards, 3 per row ──
+        # ── Clickable match cards, 3 per row (entire card is the button) ──
         if "selected_match" not in st.session_state:
             st.session_state.selected_match = None
 
@@ -152,24 +172,14 @@ with tab1:
                         and st.session_state.selected_match.get("away") == away
                     )
 
+                    label = f"{'✅ ' if is_selected else ''}{home} vs {away}\n{day_str} {date_str} · {time_str} UK"
+
                     with col:
-                        with st.container(border=True):
-                            st.markdown(
-                                f"<div style='font-size:13px; font-weight:600; text-align:center;'>{home} vs {away}</div>"
-                                f"<div style='font-size:11px; color:#888; text-align:center; margin-bottom:6px;'>{day_str} {date_str} · {time_str} UK</div>",
-                                unsafe_allow_html=True
-                            )
-                            btn_label = "✅ Selected" if is_selected else "Select"
-                            if st.button(
-                                btn_label,
-                                key=f"btn_{selected_mw}_{idx}",
-                                type="primary" if is_selected else "secondary",
-                                use_container_width=True
-                            ):
-                                st.session_state.selected_match = {
-                                    "matchweek": selected_mw, "home": home, "away": away
-                                }
-                                st.rerun()
+                        if st.button(label, key=f"btn_{selected_mw}_{idx}", use_container_width=True):
+                            st.session_state.selected_match = {
+                                "matchweek": selected_mw, "home": home, "away": away
+                            }
+                            st.rerun()
 
             # Default to first match in the list if nothing has been picked yet
             if st.session_state.selected_match is None:
