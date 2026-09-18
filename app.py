@@ -226,6 +226,30 @@ with tab1:
         # Compute match forecasts
         res = dixon_coles_engine.predict(home_team, away_team)
 
+        # ── Exact score consistent with the predicted result ──
+        # Picks the most likely scoreline among those that agree with the
+        # predicted outcome (home win / draw / away win), so scores are not
+        # always 1-1.
+        _m = res['matrix'] / np.sum(res['matrix'])
+        _probs = {"H": res['home_win_p'], "D": res['draw_p'], "A": res['away_win_p']}
+        # Predict a draw only when the match is really balanced
+        if abs(res['home_win_p'] - res['away_win_p']) < 0.05:
+            _outcome = "D"
+        else:
+            _outcome = "H" if res['home_win_p'] > res['away_win_p'] else "A"
+
+        _best, _best_p = (1, 0), -1.0
+        for h in range(_m.shape[0]):
+            for a in range(_m.shape[1]):
+                ok = (_outcome == "H" and h > a) or \
+                     (_outcome == "A" and h < a) or \
+                     (_outcome == "D" and h == a)
+                if ok and _m[h, a] > _best_p:
+                    _best, _best_p = (h, a), _m[h, a]
+
+        res['best_home_goals'], res['best_away_goals'] = _best
+        res['best_prob'] = float(_best_p)
+
         # ── Save this prediction for accuracy tracking ──
         if not df_schedule.empty:
             save_prediction(
@@ -245,7 +269,7 @@ with tab1:
             <div style="background-color: #00a86b; padding: 22px; border-radius: 12px; color: white; margin-bottom: 15px;">
                 <div style="font-size: 13px; font-weight: 800; letter-spacing: 1px; margin-bottom: 5px;">🎯 MODEL FORECASTED EXACT SCORE</div>
                 <div style="font-size: 36px; font-weight: 800; margin-bottom: 5px;">{home_team} {res['best_home_goals']} - {res['best_away_goals']} {away_team}</div>
-                <div style="font-size: 16px; opacity: 0.95;">Highest probability scoreline at <b>{res['best_prob']:.1%}</b> chance</div>
+                <div style="font-size: 16px; opacity: 0.95;">Most likely scoreline for the predicted result, at <b>{res['best_prob']:.1%}</b> chance</div>
             </div>
             """, unsafe_allow_html=True)
 
