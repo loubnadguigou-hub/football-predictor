@@ -1,0 +1,28 @@
+﻿python : 2026-09-19 02:20:08.905 WARNING streamlit.runtime.caching.cache_data_api: 
+No runtime found, using MemoryCacheStorageManager
+At line:1 char:1
++ python debug2.py 2>&1 | Out-File -Encoding utf8 debug2_output.txt
++ ~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (2026-09-19 02:2...eStorageManager:Str 
+   ing) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+2026-09-19 02:20:08.911 WARNING streamlit.runtime.caching.cache_data_api: No 
+runtime found, using MemoryCacheStorageManager
+2026-09-19 02:20:08.957 WARNING streamlit.runtime.caching.cache_data_api: No 
+runtime found, using MemoryCacheStorageManager
+2026-09-19 02:20:11.076 No runtime found, using MemoryCacheStorageManager
+2026-09-19 02:20:11.096 Thread 'MainThread': missing ScriptRunContext! This 
+warning can be ignored when running in bare mode.
+New parser present: False
+
+ROUND 1 rows read from API: 0
+ROUND 1 results deduced: 0 {}
+Schedule names NOT found in API: ['arsenal', 'aston villa', 'bournemouth', 'brentford', 'brighton and hove albion', 'chelsea', 'coventry city', 'crystal palace', 'everton', 'fulham', 'hull city', 'ipswich town', 'leeds united', 'liverpool', 'manchester city', 'manchester united', 'newcastle united', 'nottingham forest', 'sunderland', 'tottenham hotspur']
+API names NOT found in schedule: []
+Round-1 teams unknown to the model: ['AFC Bournemouth', 'Brighton & Hove Albion', 'Coventry City', 'Hull City', 'Ipswich Town', 'Leeds United', 'Manchester City', 'Manchester United', 'Newcastle United', 'Nottingham Forest', 'Tottenham Hotspur']
+
+Predict OK: Arsenal vs Coventry City {'home_win_p': 0.694, 'draw_p': 0.192, 'away_win_p': 0.114}
+
+BACKTEST:
+{'accuracy_pct': 0.0, 'correct': 0, 'total': 0, 'possible_name_mismatch': []}

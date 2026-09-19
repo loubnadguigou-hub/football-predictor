@@ -4,16 +4,12 @@ src/results_tracker.py
 Tracks the running win-prediction accuracy % of the EPL Predictive Analytics Hub.
 
 How it works:
-1. Every time a user views a match prediction, we save it (matchweek, home,
-   away, predicted outcome: H/D/A) to a local CSV via prediction_store.py.
-2. This module calls the Sportradar "Season Form Standings" endpoint twice —
-   once for round N and once for round N-1 — and diffs the win/draw/loss
-   counters per team to figure out what actually happened in round N for
-   each team (since the endpoint gives cumulative counts, not per-match
-   results tied to an opponent).
-3. We match that deduced result back to our stored predictions (we already
-   know home/away from our own schedule data) and compute a running
-   accuracy percentage.
+1. This module calls the Sportradar "Season Form Standings" endpoint for round N
+   and round N-1 and diffs the win/draw/loss counters per team to deduce what
+   actually happened in round N (the endpoint gives cumulative counts).
+2. backtest_accuracy() goes through EVERY matchweek already played this season,
+   asks the model for its prediction for each fixture, and compares it with the
+   real result -> running accuracy of the model over the season.
 
 IMPORTANT: never hardcode the API key here. Put it in
 .streamlit/secrets.toml locally, and in the Streamlit Cloud "Secrets" panel
@@ -21,13 +17,16 @@ in production:
 
     [sportradar]
     api_key = "YOUR_KEY_HERE"
-
-Then read it with st.secrets["sportradar"]["api_key"].
 """
+
+import time
 
 import requests
 import pandas as pd
 import streamlit as st
+
+from src.prediction_store import outcome_from_probs
+from src.team_names import to_model_team
 
 BASE_URL = "https://api.sportradar.com/soccer/{access_level}/v4/{lang}/seasons/{season_id}/form_standings.json"
 
@@ -36,19 +35,51 @@ ACCESS_LEVEL = "trial"           # switch to "production" once you upgrade the k
 LANG = "en"
 
 
+class ResultsAPIError(RuntimeError):
+    """Raised when the results API cannot be reached or is not configured."""
+
+
+# Small alias table so schedule names and API names can be matched
+_ALIASES = {
+    "man utd": "manchester united", "man united": "manchester united",
+    "man city": "manchester city", "spurs": "tottenham hotspur",
+    "tottenham": "tottenham hotspur", "wolves": "wolverhampton wanderers",
+    "newcastle": "newcastle united", "nott'm forest": "nottingham forest",
+    "nottm forest": "nottingham forest", "brighton": "brighton and hove albion",
+    "west ham": "west ham united", "leeds": "leeds united",
+    "leicester": "leicester city",
+}
+
+
+def _norm(name) -> str:
+    """Normalises a team name so 'Man United', 'Manchester United FC' etc. match."""
+    n = str(name).lower().strip().replace("&", "and").replace(".", "")
+    for token in (" fc", " afc"):
+        if n.endswith(token):
+            n = n[: -len(token)]
+    if n.startswith("afc "):
+        n = n[4:]
+    n = " ".join(n.split())
+    return _ALIASES.get(n, n)
+
+
 def _get_api_key() -> str:
     """Reads the API key from Streamlit secrets. Never hardcode it in this file."""
     try:
         return st.secrets["sportradar"]["api_key"]
-    except Exception:
-        st.error("⚠️ Sportradar API key missing. Add it to .streamlit/secrets.toml or Streamlit Cloud Secrets.")
-        st.stop()
+    except Exception as e:
+        raise ResultsAPIError(
+            "Sportradar API key missing (add it to .streamlit/secrets.toml or Streamlit Cloud Secrets)."
+        ) from e
 
 
+@st.cache_data(ttl=3600, show_spinner=False)
 def fetch_form_standings(round_number: int) -> pd.DataFrame:
     """
     Calls the Season Form Standings endpoint for a given round and returns
-    a DataFrame with one row per team: played, win, draw, loss, points, etc.
+    a DataFrame with one row per team: played, win, draw, loss, form.
+    Cached for 1 hour so Streamlit reruns do not hit the API again (the trial
+    key is rate limited).
     """
     api_key = _get_api_key()
     url = BASE_URL.format(access_level=ACCESS_LEVEL, lang=LANG, season_id=SEASON_ID)
@@ -59,16 +90,31 @@ def fetch_form_standings(round_number: int) -> pd.DataFrame:
         "limit": 10,
     }
 
-    resp = requests.get(url, params=params, timeout=15)
-    resp.raise_for_status()
-    data = resp.json()
+    try:
+        resp = requests.get(url, params=params, timeout=15)
+        resp.raise_for_status()   # HTTPError (401, 403, 404, 429...) propagates
+    except (requests.ConnectionError, requests.Timeout) as e:
+        raise ResultsAPIError(
+            "Cannot reach the Sportradar API (check internet connection, VPN or firewall)."
+        ) from e
+
+    time.sleep(1.1)   # trial keys allow ~1 request per second
+    return _parse_form_standings(resp.json())
+
+
+def _parse_form_standings(data: dict) -> pd.DataFrame:
+    """Parses the real Sportradar structure (season_form_standings / full_time_total)."""
+    blocks = data.get("season_form_standings") or data.get("season_form_standing") or []
+    if isinstance(blocks, dict):
+        blocks = [blocks]
+    total_blocks = [b for b in blocks if b.get("type") == "full_time_total"]
+    if not total_blocks:
+        total_blocks = [b for b in blocks if "total" in str(b.get("type", ""))][:1] or blocks[:1]
 
     rows = []
-    for group in data.get("season_form_standing", {}).get("groups", []):
-        for fs in group.get("form_standings", []):
-            if fs.get("type") != "total":
-                continue
-            for standing in fs.get("form_standing", []):
+    for block in total_blocks:
+        for group in block.get("groups", []):
+            for standing in group.get("form_standings", []):
                 comp = standing.get("competitor", {})
                 rows.append({
                     "team": comp.get("name"),
@@ -76,9 +122,14 @@ def fetch_form_standings(round_number: int) -> pd.DataFrame:
                     "win": standing.get("win", 0),
                     "draw": standing.get("draw", 0),
                     "loss": standing.get("loss", 0),
+                    "goals_for": standing.get("goals_for", 0),
+                    "goals_against": standing.get("goals_against", 0),
                     "form": standing.get("form", ""),
                 })
-    return pd.DataFrame(rows)
+    df = pd.DataFrame(rows)
+    if not df.empty:
+        df = df.drop_duplicates(subset="team", keep="first").reset_index(drop=True)
+    return df
 
 
 def deduce_round_results(round_number: int) -> dict:
@@ -118,11 +169,99 @@ def deduce_round_results(round_number: int) -> dict:
     return results
 
 
+def _actual_outcome(home_result, away_result):
+    """H/D/A from the two teams' individual results, or None if inconsistent."""
+    if home_result == "W":
+        return "H"
+    if away_result == "W":
+        return "A"
+    if home_result == "D" and away_result == "D":
+        return "D"
+    return None
+
+
+@st.cache_data(ttl=3600, show_spinner="Computing season accuracy…")
+def backtest_accuracy(schedule_df: pd.DataFrame, _model) -> dict:
+    """
+    Season-to-date accuracy of the model.
+
+    For every matchweek already played, predicts each fixture with the model
+    and compares the predicted outcome (H/D/A) with the real one.
+
+    schedule_df needs columns: matchweek, home_team, away_team.
+    Returns {"accuracy_pct", "correct", "total", "detail": DataFrame,
+             "possible_name_mismatch": [team names]}
+    Network errors are NOT caught here (so they are not cached); the caller
+    should wrap the call in try/except.
+    """
+    empty = {"accuracy_pct": 0.0, "correct": 0, "total": 0,
+             "detail": pd.DataFrame(), "possible_name_mismatch": []}
+    if schedule_df is None or schedule_df.empty or "matchweek" not in schedule_df.columns:
+        return empty
+
+    mw_num = pd.to_numeric(schedule_df["matchweek"], errors="coerce")
+    rounds = sorted({int(x) for x in mw_num.dropna().unique()})
+
+    detail_rows = []
+    api_names = set()
+    schedule_names = set()
+
+    for rnd in rounds:
+        try:
+            results = deduce_round_results(rnd)
+        except requests.HTTPError as e:
+            # Round not available yet on the API -> stop; rate limit etc. -> re-raise
+            if e.response is not None and e.response.status_code in (400, 404):
+                break
+            raise
+        if not results:
+            break   # this round has not been played yet
+
+        results_norm = {_norm(t): r for t, r in results.items()}
+        api_names.update(results_norm.keys())
+
+        fixtures = schedule_df[mw_num == rnd]
+        for _, fx in fixtures.iterrows():
+            home, away = str(fx["home_team"]), str(fx["away_team"])
+            schedule_names.update([_norm(home), _norm(away)])
+
+            actual = _actual_outcome(results_norm.get(_norm(home)), results_norm.get(_norm(away)))
+            if actual is None:
+                continue   # not played yet (or inconsistent data)
+
+            try:
+                res = _model.predict(to_model_team(home, _model.get_teams()), to_model_team(away, _model.get_teams()))
+            except Exception:
+                continue   # team unknown to the model
+
+            predicted = outcome_from_probs(res["home_win_p"], res["draw_p"], res["away_win_p"])
+            detail_rows.append({
+                "matchweek": rnd, "home_team": home, "away_team": away,
+                "predicted": predicted, "actual": actual,
+                "correct": predicted == actual,
+            })
+
+    detail_df = pd.DataFrame(detail_rows)
+    mismatch = sorted(schedule_names - api_names) if api_names else []
+    if detail_df.empty:
+        return {**empty, "possible_name_mismatch": mismatch}
+
+    correct = int(detail_df["correct"].sum())
+    total = len(detail_df)
+    return {
+        "accuracy_pct": round(100 * correct / total, 1),
+        "correct": correct,
+        "total": total,
+        "detail": detail_df,
+        "possible_name_mismatch": mismatch,
+    }
+
+
 def compute_accuracy(predictions_df: pd.DataFrame) -> dict:
     """
-    predictions_df must have columns: matchweek, home_team, away_team, predicted_outcome (H/D/A)
-
-    Returns {"accuracy_pct": float, "correct": int, "total": int, "detail": DataFrame}
+    Accuracy of the predictions that were saved by save_prediction()
+    (only fixtures a user actually opened). Kept for compatibility.
+    predictions_df columns: matchweek, home_team, away_team, predicted_outcome (H/D/A)
     """
     if predictions_df.empty:
         return {"accuracy_pct": 0.0, "correct": 0, "total": 0, "detail": pd.DataFrame()}
@@ -134,28 +273,16 @@ def compute_accuracy(predictions_df: pd.DataFrame) -> dict:
     for _, pred in predictions_df.iterrows():
         mw = int(pred["matchweek"])
         home, away = pred["home_team"], pred["away_team"]
-        round_results = round_results_cache.get(mw, {})
+        round_results = {_norm(t): r for t, r in round_results_cache.get(mw, {}).items()}
 
-        home_result = round_results.get(home)
-        away_result = round_results.get(away)
+        actual = _actual_outcome(round_results.get(_norm(home)), round_results.get(_norm(away)))
+        if actual is None:
+            continue
 
-        if home_result is None or away_result is None:
-            continue  # match not played yet, skip
-
-        # Deduce actual outcome from the two teams' individual results
-        if home_result == "W":
-            actual = "H"
-        elif away_result == "W":
-            actual = "A"
-        elif home_result == "D" and away_result == "D":
-            actual = "D"
-        else:
-            continue  # inconsistent data, skip defensively
-
-        correct = (pred["predicted_outcome"] == actual)
         detail_rows.append({
             "matchweek": mw, "home_team": home, "away_team": away,
-            "predicted": pred["predicted_outcome"], "actual": actual, "correct": correct
+            "predicted": pred["predicted_outcome"], "actual": actual,
+            "correct": pred["predicted_outcome"] == actual,
         })
 
     detail_df = pd.DataFrame(detail_rows)

@@ -12,8 +12,9 @@ import plotly.express as px
 from src.data_loader import load_data, load_schedule, fetch_sportradar_player_profile
 from src.elo_dixon_coles import EloDixonColesModel
 from src.player_model import PlayerGoalModel
-from src.prediction_store import save_prediction, load_predictions
-from src.results_tracker import compute_accuracy
+from src.prediction_store import save_prediction, outcome_from_probs
+from src.results_tracker import backtest_accuracy
+from src.team_names import to_model_team
 
 # 1. Page Configuration
 st.set_page_config(
@@ -81,6 +82,20 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+
+def standardize_schedule(df):
+    """Lower-cases column names and maps them to matchweek/home_team/away_team/kickoff_time_uk."""
+    if df is None or df.empty:
+        return pd.DataFrame()
+    d = df.copy()
+    d.columns = d.columns.str.lower().str.strip()
+    return d.rename(columns={
+        "wk": "matchweek", "week": "matchweek",
+        "home": "home_team", "away": "away_team",
+        "time": "kickoff_time_uk"
+    })
+
+
 # Main Title
 st.markdown("<div class='main-title'>⚽ Premier League Predictive Analytics Hub</div>", unsafe_allow_html=True)
 
@@ -119,30 +134,48 @@ tab1, tab2 = st.tabs(["📊 Match Outcome Engine", "🎯 Player Goal Scoring Mod
 with tab1:
     st.markdown("### 🗓️ 2026/27 Full Season Schedule & Match Selector")
 
-    # ── Running prediction accuracy banner ──
-    predictions_df = load_predictions()
-    accuracy = compute_accuracy(predictions_df)
-    if accuracy["total"] > 0:
-        st.markdown(f"""
-        <div class="metric-box" style="margin-bottom: 15px; max-width: 280px;">
-            <div class="metric-title">🎯 PREDICTION ACCURACY</div>
-            <div class="metric-val">{accuracy['accuracy_pct']}%</div>
-            <div style="font-size:11px; color:#888;">{accuracy['correct']}/{accuracy['total']} correct so far</div>
-        </div>
-        """, unsafe_allow_html=True)
+    df_sched = standardize_schedule(df_schedule)
 
-    if not df_schedule.empty:
-        # Standardize column names
-        df_sched = df_schedule.copy()
-        df_sched.columns = df_sched.columns.str.lower().str.strip()
+    # ── Season-to-date model accuracy (model vs. real results of all played matchweeks) ──
+    if not df_sched.empty and "matchweek" in df_sched.columns:
+        backtest = None
+        try:
+            backtest = backtest_accuracy(df_sched, dixon_coles_engine)
+        except Exception as e:
+            # Results API unreachable / key missing / rate limit: keep the app running
+            st.caption(f"⚠️ Season accuracy unavailable right now: {e}")
 
-        rename_map = {
-            "wk": "matchweek", "week": "matchweek",
-            "home": "home_team", "away": "away_team",
-            "time": "kickoff_time_uk"
-        }
-        df_sched = df_sched.rename(columns=rename_map)
+        if backtest is not None and backtest["total"] > 0:
+            n_mw = backtest["detail"]["matchweek"].nunique()
+            st.markdown(f"""
+            <div class="metric-box" style="margin-bottom: 15px; max-width: 320px;">
+                <div class="metric-title">🎯 MODEL ACCURACY · SEASON TO DATE</div>
+                <div class="metric-val">{backtest['accuracy_pct']}%</div>
+                <div style="font-size:11px; color:#888;">{backtest['correct']}/{backtest['total']} results correct over {n_mw} matchweek(s)</div>
+            </div>
+            """, unsafe_allow_html=True)
 
+            with st.expander("📋 Accuracy by matchweek & past matches"):
+                detail = backtest["detail"].copy()
+                by_mw = (
+                    detail.groupby("matchweek")["correct"]
+                    .agg(correct="sum", matches="count")
+                    .reset_index()
+                )
+                by_mw["accuracy"] = (100 * by_mw["correct"] / by_mw["matches"]).round(1).astype(str) + "%"
+                st.dataframe(by_mw, use_container_width=True, hide_index=True)
+
+                detail["result"] = detail["correct"].map({True: "✅", False: "❌"})
+                st.dataframe(
+                    detail[["matchweek", "home_team", "away_team", "predicted", "actual", "result"]],
+                    use_container_width=True, hide_index=True
+                )
+        elif backtest is not None:
+            st.caption("ℹ️ No played matches matched yet, so the season accuracy is not available.")
+            if backtest["possible_name_mismatch"]:
+                st.caption("Team names not found in the results API: " + ", ".join(backtest["possible_name_mismatch"]))
+
+    if not df_sched.empty:
         # Matchweek Filter
         available_mws = sorted(df_sched["matchweek"].unique()) if "matchweek" in df_sched.columns else [1]
         selected_mw = st.selectbox("📅 Select Matchweek:", available_mws, index=0)
@@ -224,19 +257,13 @@ with tab1:
         st.warning("Please select two different teams.")
     else:
         # Compute match forecasts
-        res = dixon_coles_engine.predict(home_team, away_team)
+        res = dixon_coles_engine.predict(to_model_team(home_team, teams), to_model_team(away_team, teams))
 
         # ── Exact score consistent with the predicted result ──
-        # Picks the most likely scoreline among those that agree with the
-        # predicted outcome (home win / draw / away win), so scores are not
-        # always 1-1.
+        # Same H/D/A rule as the accuracy tracker (outcome_from_probs), then the most
+        # likely scoreline among those that agree with that result.
         _m = res['matrix'] / np.sum(res['matrix'])
-        _probs = {"H": res['home_win_p'], "D": res['draw_p'], "A": res['away_win_p']}
-        # Predict a draw only when the match is really balanced
-        if abs(res['home_win_p'] - res['away_win_p']) < 0.05:
-            _outcome = "D"
-        else:
-            _outcome = "H" if res['home_win_p'] > res['away_win_p'] else "A"
+        _outcome = outcome_from_probs(res['home_win_p'], res['draw_p'], res['away_win_p'])
 
         _best, _best_p = (1, 0), -1.0
         for h in range(_m.shape[0]):
